@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ModificarCitaController">
+   <children>
+      <Pane prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #E469FF;">
+         <children>
+            <Label layoutX="158.0" layoutY="6.0" prefHeight="31.0" prefWidth="285.0" text="Consultorio Salud Odontológica" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Button id="btnRegresar" fx:id="btnRegresar" layoutX="522.0" layoutY="9.0" mnemonicParsing="false" onAction="#switchToMenuCitas" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: E87EFF;" text="Regresar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="1.0" layoutY="42.0" prefHeight="358.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label layoutX="9.0" layoutY="115.0" prefHeight="17.0" prefWidth="151.0" text="Fecha de la cita" />
+            <Label layoutX="8.0" layoutY="169.0" prefHeight="17.0" prefWidth="108.0" text="Hora de la cita" />
+            <Label id="txtProveedor" layoutX="11.0" layoutY="226.0" prefHeight="17.0" prefWidth="101.0" text="Id Paciente" />
+            <Label layoutX="10.0" layoutY="282.0" prefHeight="17.0" prefWidth="102.0" text="Id Dentista" />
+            <TextField id="txtHora" fx:id="txfHora" layoutX="14.0" layoutY="186.0" prefHeight="25.0" prefWidth="205.0" />
+            <TextField id="txtIdDentista" fx:id="txfIdDentista" layoutX="15.0" layoutY="299.0" prefHeight="25.0" prefWidth="205.0" />
+            <TextField id="txtIdPaciente" fx:id="txfIdPaciente" layoutX="14.0" layoutY="243.0" prefHeight="25.0" prefWidth="206.0" />
+            <Button id="btnGuardarCambios" fx:id="btnGuardarCambios" layoutX="449.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchToAlerta" style="-fx-background-color: #E469FF;" text="Guardar Cambios" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="8.0" layoutY="27.0" text="Ingresa el ID de la cita que deseas modificar" />
+            <TextField id="txtIdCita" fx:id="btnIdCita" layoutX="8.0" layoutY="59.0" prefHeight="25.0" prefWidth="233.0" />
+            <Button id="btnBuscar" fx:id="btnBuscar" layoutX="456.0" layoutY="60.0" mnemonicParsing="false" style="-fx-background-color: #E469FF;" text="Buscar" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Button>
+            <DatePicker id="dateFecha" fx:id="dateFechaCita" layoutX="9.0" layoutY="132.0" prefHeight="25.0" prefWidth="206.0" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

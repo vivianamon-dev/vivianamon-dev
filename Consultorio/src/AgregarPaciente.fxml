@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AgregarPacienteController">
+   <children>
+      <Pane prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #E469FF;">
+         <children>
+            <Label layoutX="158.0" layoutY="6.0" prefHeight="31.0" prefWidth="285.0" text="Consultorio Salud Odontológica" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Button id="btnRegresar" fx:id="btnRegresar" layoutX="522.0" layoutY="9.0" mnemonicParsing="false" onAction="#switchToMenuArchivo" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: E87EFF;" text="Regresar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <ScrollPane layoutY="42.0" prefHeight="357.0" prefWidth="600.0">
+         <content>
+            <Pane prefHeight="707.0" prefWidth="584.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label layoutX="11.0" layoutY="38.0" text="Nombre(s)" />
+                  <Label layoutX="11.0" layoutY="90.0" text="Apellido Paterno" />
+                  <Label layoutX="9.0" layoutY="147.0" text="Apellido Materno" />
+                  <Label layoutX="8.0" layoutY="306.0" text="Edad" />
+                  <Label layoutX="11.0" layoutY="253.0" prefHeight="17.0" prefWidth="131.0" text="Fecha de Nacimiento" />
+                  <Label layoutX="6.0" layoutY="360.0" text="Correo Eléctronico" />
+                  <Label layoutX="9.0" layoutY="200.0" text="Sexo" />
+                  <Label layoutX="11.0" layoutY="653.0" text="Código Postal" />
+                  <Label layoutX="11.0" layoutY="6.0" text="INFORMACIÓN PERSONAL" />
+                  <Separator layoutX="4.0" layoutY="20.0" prefHeight="4.0" prefWidth="571.0" />
+                  <TextField id="txtApePat" fx:id="txfApePater" layoutX="8.0" layoutY="112.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField id="txtNombres" fx:id="txfNombres" layoutX="8.0" layoutY="55.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField id="txtEdad" fx:id="txfEdad" layoutX="8.0" layoutY="323.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField id="txtSexo" fx:id="txfSexo" layoutX="8.0" layoutY="217.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField id="txtApeMat" fx:id="txfApeMater" layoutX="8.0" layoutY="166.0" prefHeight="25.0" prefWidth="206.0" />
+                  <DatePicker id="txtFechaNac" fx:id="dateFechaNac" layoutX="8.0" layoutY="270.0" prefHeight="25.0" prefWidth="205.0" />
+                  <Separator layoutX="9.0" layoutY="426.0" prefHeight="1.0" prefWidth="567.0" />
+                  <Label layoutX="9.0" layoutY="410.0" text="DIRECCIÓN" />
+                  <Label layoutX="9.0" layoutY="490.0" prefHeight="17.0" prefWidth="61.0" text="Avenida" />
+                  <Label layoutX="9.0" layoutY="545.0" text="Localidad" />
+                  <Label layoutX="8.0" layoutY="600.0" prefHeight="17.0" prefWidth="79.0" text="Colonia" />
+                  <Label layoutX="9.0" layoutY="437.0" text="Calle" />
+                  <TextField id="txtCalle" fx:id="txfCalle" layoutX="8.0" layoutY="454.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField id="txtAvenida" fx:id="txfAvenida" layoutX="9.0" layoutY="507.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField id="txtCorreoElectronico" fx:id="txfCorreoElect" layoutX="8.0" layoutY="377.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField id="txtLocalidad" fx:id="txfLocalidad" layoutX="8.0" layoutY="562.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField id="txtColonia" fx:id="txfColonia" layoutX="8.0" layoutY="617.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField id="txtCodigoPostal" fx:id="txfCodigoPos" layoutX="9.0" layoutY="670.0" prefHeight="25.0" prefWidth="205.0" />
+                  <Button id="btnAgregar" fx:id="btnAgregar" layoutX="498.0" layoutY="671.0" mnemonicParsing="false" onAction="#switchToAlerta" style="-fx-background-color: #E469FF;" text="Agregar" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

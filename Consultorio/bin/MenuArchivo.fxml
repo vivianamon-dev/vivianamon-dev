@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="469.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuArchivoController">
+   <children>
+      <Pane prefHeight="42.0" prefWidth="469.0" style="-fx-background-color: #E469FF;">
+         <children>
+            <Label layoutX="90.0" layoutY="6.0" prefHeight="31.0" prefWidth="290.0" text="Consultorio Salud Odontológica" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Button id="btnRegresar" fx:id="btnRegresar" layoutX="391.0" layoutY="9.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: E87EFF;" text="Regresar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Button id="btnVisualizarPacientes" fx:id="btnVisualizarPacientes" layoutX="282.0" layoutY="114.0" mnemonicParsing="false" onAction="#switchToVisualizarPaciente" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Visualizar Pacientes" textFill="WHITE" />
+      <Label layoutX="128.0" layoutY="53.0" text="Bienvenido al Archivo Clínico">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="80.0" text="¿Qué desea realizar?">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Label>
+      <Button id="btnAgregarPacientes" fx:id="btnAgregarPacientes" layoutX="282.0" layoutY="169.0" mnemonicParsing="false" onAction="#switchToAgregarPaciente" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Agregar Pacientes" textFill="WHITE" />
+      <Button id="btnModificarPacientes" fx:id="btnModificarPacientes" layoutX="282.0" layoutY="220.0" mnemonicParsing="false" onAction="#switchToModificarPaciente" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Modificar Pacientes" textFill="WHITE" />
+      <Button id="btnEliminarPacientes" fx:id="btnEliminarPacientes" layoutX="282.0" layoutY="280.0" mnemonicParsing="false" onAction="#switchToEliminarPaciente" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Eliminar Pacientes" textFill="WHITE" />
+      <Button id="btnBuscarPacientes" fx:id="btnBuscarPacientes" layoutX="282.0" layoutY="334.0" mnemonicParsing="false" onAction="#switchToBuscarPaciente" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Buscar Pacientes" textFill="WHITE" />
+      <ImageView fitHeight="300.0" fitWidth="244.0" layoutX="21.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/d1.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

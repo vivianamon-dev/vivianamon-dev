@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="469.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuCitasController">
+   <children>
+      <Pane prefHeight="42.0" prefWidth="469.0" style="-fx-background-color: #E469FF;">
+         <children>
+            <Label layoutX="90.0" layoutY="6.0" prefHeight="31.0" prefWidth="290.0" text="Consultorio Salud Odontológica" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Button id="btnRegresar" fx:id="btnRegresar" layoutX="391.0" layoutY="9.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: E87EFF;" text="Regresar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Button id="btnVisualizarCitas" fx:id="btnVisualizarCita" layoutX="282.0" layoutY="114.0" mnemonicParsing="false" onAction="#switchToVisualizarCitas" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Visualizar Citas" textFill="WHITE" />
+      <Label layoutX="130.0" layoutY="52.0" text="Bienvenido al menú de Citas">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="80.0" text="¿Qué desea realizar?">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Label>
+      <Button id="btnAgregarCita" fx:id="btnAgregarCita" layoutX="282.0" layoutY="169.0" mnemonicParsing="false" onAction="#switchToAgregarCita" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Agregar Cita" textFill="WHITE" />
+      <Button id="btnModificarCita" fx:id="btnModificarCita" layoutX="282.0" layoutY="220.0" mnemonicParsing="false" onAction="#switchToModificarCita" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Modificar Cita" textFill="WHITE" />
+      <Button id="btnEliminarCita" fx:id="btnEliminarCita" layoutX="282.0" layoutY="280.0" mnemonicParsing="false" onAction="#switchToEliminarCita" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Eliminar Cita" textFill="WHITE" />
+      <Button id="btnBuscarCita" fx:id="btnBuscarCita" layoutX="282.0" layoutY="340.0" mnemonicParsing="false" onAction="#switchToBuscarCita" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #E469FF;" text="Buscar Cita " textFill="WHITE" />
+      <ImageView fitHeight="239.0" fitWidth="244.0" layoutX="24.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/d3.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

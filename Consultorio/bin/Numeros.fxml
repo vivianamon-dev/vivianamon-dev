@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NumerosController">
+   <children>
+      <Pane prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #E469FF;">
+         <children>
+            <Label layoutX="160.0" layoutY="6.0" prefHeight="31.0" prefWidth="281.0" text="Consultorio Salud Odontológica" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Button id="btnRegresar" fx:id="btnRegresar" layoutX="522.0" layoutY="9.0" mnemonicParsing="false" onAction="#switchToMenuDirectorio" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: E87EFF;" text="Regresar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <TabPane layoutY="42.0" prefHeight="358.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabVisualizar" text="Visualizar Números">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="-1.0" prefHeight="332.0" prefWidth="600.0">
+                           <children>
+                              <TableView layoutX="32.0" layoutY="42.0" prefHeight="276.0" prefWidth="536.0">
+                                 <columns>
+                                    <TableColumn fx:id="columIdTel" prefWidth="75.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="Id Teléfono" />
+                                    <TableColumn fx:id="columNumTelef" prefWidth="130.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="Número de Teléfono" />
+                                    <TableColumn fx:id="columIdProovedor" prefWidth="116.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="ID Proveedor" />
+                                    <TableColumn fx:id="columIdPaciente" prefWidth="106.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="ID Paciente" />
+                                    <TableColumn fx:id="columIdDentista" prefWidth="110.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="ID Dentista" />
+                                 </columns>
+                              </TableView>
+                              <Button id="btnAgregarCitas" fx:id="btnMostrarNum" layoutX="254.0" layoutY="6.0" mnemonicParsing="false" onAction="#switchToAlerta" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #E469FF;" text="Mostrar Números" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+          <Tab fx:id="tabAgregar" text="Agregar Número">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutY="-1.0" prefHeight="330.0" prefWidth="600.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Número de teléfono" />
+                              <Label layoutX="14.0" layoutY="64.0" text="ID Proveedor" />
+                              <Label layoutX="14.0" layoutY="117.0" text="ID Paciente" />
+                              <Label layoutX="14.0" layoutY="165.0" text="ID Dentista" />
+                              <TextField fx:id="txfNumTelef" layoutX="14.0" layoutY="31.0" />
+                              <TextField fx:id="txfIdProovedor" layoutX="14.0" layoutY="81.0" />
+                              <TextField fx:id="txfIdPaciente" layoutX="14.0" layoutY="134.0" />
+                              <TextField fx:id="txfIdDentista" layoutX="14.0" layoutY="182.0" />
+                              <Button id="btnAgregarCitas" fx:id="btnAgregar" layoutX="471.0" layoutY="293.0" mnemonicParsing="false" onAction="#switchToAlerta" style="-fx-background-color: #E469FF;" text="Agregar Número" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabModificar" text="Modificar Número">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutY="-1.0" prefHeight="330.0" prefWidth="600.0">
+                           <children>
+                              <Label layoutX="12.0" layoutY="82.0" text="Número de teléfono" />
+                              <Label layoutX="14.0" layoutY="136.0" text="ID Proveedor" />
+                              <Label layoutX="12.0" layoutY="199.0" text="ID Paciente" />
+                              <Label layoutX="13.0" layoutY="251.0" text="ID Dentista" />
+                              <TextField fx:id="txfNumTelef" layoutX="14.0" layoutY="99.0" />
+                              <TextField fx:id="txfIdProovedor" layoutX="14.0" layoutY="153.0" />
+                              <TextField fx:id="txfIdPaciente" layoutX="14.0" layoutY="216.0" />
+                              <TextField fx:id="txfIdDentista" layoutX="14.0" layoutY="268.0" />
+                              <Button id="btnAgregarCitas" fx:id="btnAgregarNum" layoutX="471.0" layoutY="293.0" mnemonicParsing="false" onAction="#switchToAlerta" style="-fx-background-color: #E469FF;" text="Agregar Número" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="13.0" layoutY="14.0" text="Ingresa el ID del número que deseas modificar" />
+                              <TextField fx:id="txfIdTel" layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="193.0" />
+                              <Button id="btnAgregarCitas" fx:id="btnBuscar" layoutX="313.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchToAlerta" style="-fx-background-color: #E469FF;" text="Buscar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabEliminar" text="Eliminar Número">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutY="-1.0" prefHeight="330.0" prefWidth="600.0">
+                           <children>
+                              <Button id="btnAgregarCitas" fx:id="btnEliminar" layoutX="438.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchToAlerta" style="-fx-background-color: #E469FF;" text="Eliminar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="13.0" layoutY="14.0" text="Ingresa el ID del número que deseas eliminar" />
+                              <TextField fx:id="txfIdNum" layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="193.0" />
+                              <Button id="btnAgregarCitas" fx:id="btnBuscar" layoutX="313.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchToAlerta" style="-fx-background-color: #E469FF;" text="Buscar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TableView layoutX="22.0" layoutY="81.0" prefHeight="91.0" prefWidth="536.0">
+                                 <columns>
+                                    <TableColumn fx:id="columIdTel" prefWidth="75.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="Id Teléfono" />
+                                    <TableColumn fx:id="columNumTelef" prefWidth="130.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="Número de Teléfono" />
+                                    <TableColumn fx:id="columIdProovedor" prefWidth="116.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="ID Proveedor" />
+                                    <TableColumn fx:id="columIdPaciente" prefWidth="106.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="ID Paciente" />
+                                    <TableColumn fx:id="columnIdDentista" prefWidth="110.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="ID Dentista" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabBorrar" text="Buscar Número">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutY="-1.0" prefHeight="330.0" prefWidth="600.0">
+                           <children>
+                              <Label layoutX="13.0" layoutY="14.0" text="Ingresa el número de teléfono que deseas buscar" />
+                              <TextField fx:id="txfNumTelef" layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="193.0" />
+                              <Button id="btnAgregarCitas" fx:id="btnBuscar" layoutX="313.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchToAlerta" style="-fx-background-color: #E469FF;" text="Buscar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TableView layoutX="22.0" layoutY="81.0" prefHeight="91.0" prefWidth="536.0">
+                                 <columns>
+                                    <TableColumn fx:id="columIdTel" prefWidth="75.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="Id Teléfono" />
+                                    <TableColumn fx:id="columNumTelef" prefWidth="130.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="Número de Teléfono" />
+                                    <TableColumn fx:id="columIdProovedor" prefWidth="116.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="ID Proveedor" />
+                                    <TableColumn fx:id="columIdPaciente" prefWidth="106.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="ID Paciente" />
+                                    <TableColumn fx:id="columIdDentista" prefWidth="110.0" style="-fx-background-color: #D639F8; -fx-border-color: #000000;" text="ID Dentista" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
