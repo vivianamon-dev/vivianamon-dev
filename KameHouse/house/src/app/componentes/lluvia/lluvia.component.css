@@ -1,0 +1,2476 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.hide {
+  display: none !important;
+}
+
+.wrapper {
+  width: 75rem;
+  height: 70rem;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.green-ecosystem {
+  width: 75rem;
+  height: 70rem;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  opacity: 1;
+}
+
+.green-ecosystem .left {
+  width: 100%;
+  height: 100%;
+  background-color: #d4eff9;
+  position: relative;
+}
+
+.sea {
+  width: 40rem;
+  height: 19rem;
+  background: red;
+  position: absolute;
+  top: 47.65rem;
+  left: 17rem;
+  border-bottom-left-radius: 20rem;
+  border-bottom-right-radius: 20rem;
+  overflow: hidden;
+}
+
+.sea .lower {
+  position: absolute;
+  width: 100%;
+  height: 12rem;
+  background: #66b8c0;
+  top: 9rem;
+}
+
+.sea .upper {
+  background: #b9e3f3;
+  width: 100%;
+  height: 100%;
+}
+
+.sea .upper .water {
+  width: 9.5rem;
+  height: 1.4rem;
+  position: absolute;
+  background: #89d2e1;
+  top: 3rem;
+  border-radius: 10px;
+  left: 3rem;
+}
+
+.sea .upper .water::after {
+  position: absolute;
+  content: "";
+  height: 1.2rem;
+  width: 3.5rem;
+  border-radius: 10px;
+  background-color: #89d2e1;
+  right: -8px;
+  top: 27px;
+}
+
+.sea .upper .water::before {
+  position: absolute;
+  content: "";
+  height: 1.3rem;
+  width: 5rem;
+  background-color: #89d2e1;
+  border-radius: 10px;
+  top: 4rem;
+  right: -7rem;
+}
+
+.sea .upper .waves {
+  position: absolute;
+  width: 10rem;
+  height: 7px;
+  background: blue;
+  background-repeat: repeat;
+  height: 6.6666666667px;
+  background-size: 20px 22px;
+  background-image: radial-gradient(
+      circle at 10.666667px -4.333333px,
+      transparent 11px,
+      #5773a5 0px
+    ),
+    radial-gradient(
+      circle at 11.666667px 5.666667px,
+      transparent 11px,
+      #5773a5 0px
+    );
+  top: 3rem;
+  left: 14rem;
+}
+
+.green-ecosystem .tree1 {
+  width: 1.35px;
+  height: 4rem;
+  position: absolute;
+  background-color: #654b00;
+  top: 40rem;
+  left: 131px;
+}
+
+.green-ecosystem .tree1::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #bcd663;
+  border-radius: 50%;
+  top: -15px;
+  left: -7px;
+}
+
+.green-ecosystem .tree1::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #bed563;
+  border-radius: 50%;
+  top: -8px;
+  left: -10px;
+}
+
+.green-ecosystem .tree2 {
+  width: 1.35px;
+  height: 4rem;
+  position: absolute;
+  background-color: brown;
+  top: 40rem;
+  left: 165px;
+}
+
+.green-ecosystem .tree2::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #bcd663;
+  border-radius: 50%;
+  top: -8px;
+  left: -10px;
+}
+
+.green-ecosystem .tree2::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #bcd663;
+  border-radius: 50%;
+  top: -15px;
+  left: -7px;
+}
+
+.green-ecosystem .tree3 {
+  width: 2px;
+  height: 4rem;
+  position: absolute;
+  background-color: #654b00;
+  top: 40rem;
+  left: 144.5px;
+}
+
+.green-ecosystem .tree3::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: #81c35c;
+  border-radius: 50%;
+  top: -18px;
+  left: -12px;
+}
+
+.green-ecosystem .tree3::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #81c35c;
+  border-radius: 46%;
+  top: -28px;
+  left: -10px;
+}
+
+.green-ecosystem .tree3 .branch {
+  top: -13px;
+  position: absolute;
+  z-index: 3;
+  width: 2px;
+  height: 2rem;
+  background-color: #654b00;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.green-ecosystem .tree3 .branch::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #654b00;
+  left: 4px;
+  transform: rotateZ(45deg);
+  top: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.green-ecosystem .tree3 .branch::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #654b00;
+  left: -4px;
+  transform: rotateZ(-45deg);
+  top: 4px;
+  border-top-right-radius: 2px;
+}
+
+.green-ecosystem .tree9 {
+  position: absolute;
+  background: #00a388;
+  background-image: linear-gradient(45deg, #008735 40%, #00b64a 40%);
+  width: 40px;
+  height: 64px;
+  border-radius: 70px 70px 60px 50px;
+  top: 35rem;
+  left: 21rem;
+}
+
+.green-ecosystem .tree9::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 16px;
+  width: 8px;
+  height: 15px;
+  background: #674d00;
+}
+
+.green-ecosystem .tree8 {
+  position: absolute;
+  background: #00a388;
+  background-image: linear-gradient(45deg, #027647 40%, #00a251 40%);
+  width: 40px;
+  height: 64px;
+  border-radius: 70px 70px 60px 50px;
+  top: 36rem;
+  left: 24rem;
+  width: 20px;
+  height: 58px;
+  border-radius: 50% 50% 10px 10px;
+}
+
+.green-ecosystem .tree8::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 8px;
+  width: 4px;
+  height: 15px;
+  background: #674d00;
+}
+
+.green-ecosystem .tree4 {
+  width: 2px;
+  height: 4rem;
+  position: absolute;
+  background-color: #654b00;
+  top: 39rem;
+  left: 188.5px;
+}
+
+.green-ecosystem .tree4 .branch {
+  top: -3px;
+  position: absolute;
+  z-index: 3;
+  width: 2px;
+  height: 2rem;
+  background-color: #654b00;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.green-ecosystem .tree4 .branch::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: #654b00;
+  left: -4px;
+  transform: rotateZ(-45deg);
+  top: 4px;
+  border-top-right-radius: 2px;
+}
+
+.green-ecosystem .tree4 .branch::after {
+  position: absolute;
+  content: "";
+  width: 1.5px;
+  height: 12px;
+  background-color: #654b00;
+  left: 4px;
+  transform: rotateZ(45deg);
+  top: 1px;
+  border-top-right-radius: 5px;
+  /* border-bottom-right-radius: 0px; */
+  border-top-left-radius: 5px;
+}
+
+.green-ecosystem .tree4::before {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 23px;
+  background-color: #bcd663;
+  border-radius: 50%;
+  top: -21px;
+  left: -12px;
+}
+
+.green-ecosystem .tree4::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-color: #bcd663;
+  border-radius: 50%;
+  top: -11px;
+  left: -14px;
+}
+
+.green-ecosystem .tree7 {
+  position: absolute;
+  background: #00a388;
+  background-image: linear-gradient(45deg, #609545 40%, #84c25e 40%);
+  width: 40px;
+  height: 64px;
+  border-radius: 70px 70px 60px 50px;
+  top: 36rem;
+  left: 29.65rem;
+  width: 24px;
+  height: 59px;
+  border-radius: 50% 50% 10px 10px;
+}
+
+.green-ecosystem .tree7::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+  width: 4px;
+  height: 15px;
+  background: #674d00;
+}
+
+.green-ecosystem .tree6 {
+  position: absolute;
+  background: #00a388;
+  background-image: linear-gradient(45deg, #037549 40%, #00a254 40%);
+  width: 40px;
+  height: 71px;
+  border-radius: 70px 70px 60px 50px;
+  border-radius: 74% 71% 19px 20px;
+  top: 34rem;
+  left: 31rem;
+}
+
+.green-ecosystem .tree6::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 18px;
+  width: 6px;
+  height: 16px;
+  background: #674d00;
+}
+
+.green-ecosystem .sun {
+  position: absolute;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  top: 16rem;
+  left: 10rem;
+  position: absolute;
+  background: #fff054;
+  top: 15%;
+  right: 30%;
+  /* width: 140px; */
+  /* height: 140px; */
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px 15px #fff9ba;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: scale(1.2);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.green-ecosystem .cloud2 {
+  width: 6rem;
+  height: 1.2rem;
+  background-color: #fffefe;
+  position: absolute;
+  top: 26.75rem;
+  left: 8.5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -3px -3px 0 #fefde3 inset;
+}
+
+.green-ecosystem .cloud2::before {
+  position: absolute;
+  content: "";
+  width: 36px;
+  height: 3rem;
+  border-radius: 50%;
+  background: #fffefe;
+  top: -18px;
+  left: 1rem;
+  box-shadow: -3px -10px 0 #fefde3 inset;
+}
+
+.green-ecosystem .cloud1 {
+  width: 7rem;
+  height: 1.2rem;
+  background-color: #a4e5ff;
+  position: absolute;
+  top: 35.75rem;
+  left: 5.5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -3px -10px 0 #93dafc inset;
+}
+
+.green-ecosystem .cloud1::before {
+  width: 5.15rem;
+  height: 1.2rem;
+  content: "";
+  top: -1.1rem;
+  left: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #a4e5ff;
+  position: absolute;
+  box-shadow: -3px -10px 0 #93dafc inset;
+}
+
+.green-ecosystem .cloud1::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 3rem;
+  border-radius: 50%;
+  background: #a4e5ff;
+  top: -22px;
+  left: 21px;
+  box-shadow: -3px -10px 0 #93dafc inset;
+}
+
+.green-ecosystem .cloud3 {
+  width: 4rem;
+  height: 1.2rem;
+  background-color: #fffefe;
+  position: absolute;
+  top: 13.5rem;
+  left: 25.85rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 16px;
+  box-shadow: -3px -10px 0 #fefde3 inset;
+}
+
+.green-ecosystem .cloud3::before {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #fffefe;
+  top: -9px;
+  left: 12px;
+  box-shadow: -3px -10px 0 #fefde3 inset;
+}
+
+.green-ecosystem .cloud4 {
+  width: 10rem;
+  height: 16px;
+  background-color: #a3e4fe;
+  position: absolute;
+  top: 19.5rem;
+  left: 30.5rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 16px;
+  box-shadow: -3px -10px 0 #93dafc inset;
+}
+
+.green-ecosystem .cloud4::before {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background: #a3e4fe;
+  border-radius: 50%;
+  top: -24px;
+  left: 26px;
+  box-shadow: -3px -10px 0 #93dafc inset;
+}
+
+.green-ecosystem .cloud4::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background: #a3e4fe;
+  border-radius: 50%;
+  top: -12px;
+  left: 6rem;
+  box-shadow: -3px -10px 0 #93dafc inset;
+}
+
+.green-ecosystem .bird1 {
+  position: absolute;
+  left: 9rem;
+  top: 30rem;
+  border: 2px solid #030308;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border-color: #030308 transparent transparent transparent;
+  transform: translate(1px, 15px);
+}
+
+.green-ecosystem .bird1::before {
+  position: absolute;
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: -3px;
+  border: 2px solid #030308;
+  border-radius: 50%;
+  width: 12px;
+  height: 14px;
+  border-color: #030308 transparent transparent transparent;
+  /* transform: translate(-2px, 14px); */
+  transform: rotateZ(-10deg);
+}
+
+.green-ecosystem .bird2 {
+  position: absolute;
+  left: 13rem;
+  top: 30rem;
+  border: 2px solid #030308;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border-color: #030308 transparent transparent transparent;
+  /* transform: translate(1px, 15px); */
+  transform: rotateZ(22deg);
+}
+
+.green-ecosystem .bird2::before {
+  position: absolute;
+  content: "";
+  left: 8px;
+  top: -6px;
+  border: 2px solid #030308;
+  border-radius: 50%;
+  width: 12px;
+  height: 14px;
+  border-color: #030308 transparent transparent transparent;
+  /* transform: translate(-2px, 14px); */
+  transform: rotateZ(-34deg);
+}
+
+.green-ecosystem .bird3 {
+  position: absolute;
+  left: 21rem;
+  top: 34rem;
+  border: 2px solid #030308;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border-color: #030308 transparent transparent transparent;
+  /* transform: translate(1px, 15px); */
+  transform: rotateZ(22deg);
+}
+
+.green-ecosystem .bird3::before {
+  position: absolute;
+  content: "";
+  left: 8px;
+  top: -4px;
+  border: 2px solid #030308;
+  border-radius: 50%;
+  width: 7px;
+  height: 11px;
+  border-color: #030308 transparent transparent transparent;
+  /* transform: translate(-2px, 14px); */
+  transform: rotateZ(-34deg);
+}
+
+.green-ecosystem .mountain1 {
+  border-bottom: 219px solid #66b8c0;
+  border-left: 92px solid transparent;
+  border-right: 88px solid transparent;
+  /* border-top-left-radius: 29px; */
+  height: 0;
+  width: 210px;
+  position: absolute;
+  top: 21rem;
+  left: 20rem;
+}
+
+.green-ecosystem .mountain1::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 60%;
+  left: -9px;
+  top: -6px;
+}
+
+.green-ecosystem .mountain1::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 51px;
+  background: #fff;
+  top: 15px;
+  border-radius: 12px;
+  left: -9px;
+  overflow: hidden;
+  box-shadow: 12px 0 0 0 #66b8c0, 24px -15px 0 0 #fff, 34px 1px 0 -2px #66b8c0,
+    41px -3px 0 -2px #fff;
+}
+
+.green-ecosystem .mountain2 {
+  border-bottom: 110px solid #00899c;
+  border-left: 73px solid transparent;
+  border-right: 77px solid transparent;
+  /* border-top-left-radius: 29px; */
+  height: 0;
+  width: 180px;
+  position: absolute;
+  top: 32rem;
+  left: 8rem;
+}
+
+.green-ecosystem .mountain2::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 23px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background-color: #fdfeff;
+  top: -12px;
+  left: -2px;
+}
+
+.green-ecosystem .mountain2::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 35px;
+  background: #fdfeff;
+  top: 1px;
+  border-radius: 12px;
+  left: -3px;
+  overflow: hidden;
+  box-shadow: 8px 0 0 0 #008b91, 16px -7px 0 0 #fdfeff, 23px 1px 0 0 #008b91,
+    29px -2px 0 -1px #fdfeff;
+}
+
+.green-ecosystem .green-bush {
+  background: #85b11c;
+  position: absolute;
+  /* bottom: 0; */
+  left: 9rem;
+  width: 36px;
+  height: 14px;
+  border-top-right-radius: 50px;
+  z-index: 1;
+  top: 41.15rem;
+}
+
+.green-ecosystem .green-bush::before {
+  content: "";
+  background: #85b11c;
+  position: absolute;
+  bottom: 6px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.green-ecosystem .green-bush::after {
+  content: "";
+  background: #85b11c;
+  position: absolute;
+  bottom: 0px;
+  right: 18px;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.green-ecosystem .bush1 {
+  position: absolute;
+  width: 9rem;
+  height: 5rem;
+  background: #85b01b;
+  top: 40rem;
+  left: 17rem;
+  border-top-left-radius: 8rem;
+  border-top-right-radius: 8rem;
+}
+
+.green-ecosystem .bush2 {
+  position: absolute;
+  width: 10.5rem;
+  height: 7rem;
+  background: #659a02;
+  top: 39.5rem;
+  left: 25rem;
+  border-top-left-radius: 8rem;
+  border-top-right-radius: 8rem;
+}
+
+.green-ecosystem .bush2 .patches {
+  width: 1.7rem;
+  height: 1rem;
+  position: absolute;
+  background: #85b11c;
+  border-radius: 50%;
+  left: 2rem;
+  top: 0.85rem;
+  transform: rotateZ(-23deg);
+}
+
+.green-ecosystem .bush2 .patches::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50% 50% 45% 64%;
+  background: #85b11c;
+  left: 1.85rem;
+  top: 7px;
+}
+
+.green-ecosystem .behind-bush {
+  width: 23rem;
+  height: 17rem;
+  right: 14rem;
+  top: 29rem;
+  position: absolute;
+  border-top-left-radius: 23rem;
+  border-top-right-radius: 23rem;
+  background-image: linear-gradient(90deg, #95af2f 0, #95af2f 51%, #7b9a21 50%);
+}
+
+.green-ecosystem .house {
+  width: 22rem;
+  height: 10rem;
+  position: absolute;
+  top: 35rem;
+  right: 18rem;
+}
+
+.green-ecosystem .house .slab {
+  bottom: 21px;
+  width: 25rem;
+  height: 1.25rem;
+  left: -18px;
+  position: absolute;
+  background: #754c31;
+}
+
+.green-ecosystem .house .back {
+  position: absolute;
+  right: 0;
+  width: 40%;
+  top: 12px;
+  height: 100%;
+  background: #dbd4c2;
+}
+
+.green-ecosystem .house .back .main .window {
+  width: 4rem;
+  height: 4rem;
+  background-color: #749cb0;
+  position: absolute;
+  top: 0;
+  left: 30%;
+  background-image: linear-gradient(
+    180deg,
+    #4d8599 0,
+    #4d8599 50%,
+    #749cb0 51%
+  );
+}
+
+.green-ecosystem .house .back .main .window::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: black;
+  opacity: 0.4;
+}
+
+.green-ecosystem .house .back .roof {
+  height: 5rem;
+  /* background: #adc291; */
+  position: absolute;
+  top: -55px;
+  border-bottom: 55px solid #dbd4c2;
+  border-left: 45px solid transparent;
+  border-right: 100px solid transparent;
+  border-right: 45px solid transparent;
+}
+
+.green-ecosystem .house .back .roof::before {
+  position: absolute;
+  content: "";
+  top: 31px;
+  right: -68px;
+  height: 10px;
+  width: 8.4rem;
+  background: #754c30;
+  transform: rotateZ(49deg);
+  border-radius: 11px;
+}
+
+.green-ecosystem .house .back .roof::after {
+  position: absolute;
+  content: "";
+  top: 31px;
+  left: -68px;
+  height: 10px;
+  width: 8.4rem;
+  background: #3a3724;
+  transform: rotateZ(-49deg);
+  border-radius: 11px;
+}
+
+.green-ecosystem .house .front {
+  position: absolute;
+  left: 55px;
+  width: 40%;
+  top: 0px;
+  height: 100%;
+  background: #e35354;
+  box-shadow: 2px 3px 5px 2px #7b9a5d73;
+}
+
+.green-ecosystem .house .front .big-window {
+  width: 15px;
+  height: 25%;
+  background-color: #a0c4d9;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  box-shadow: 15px 0 0 0px #bbe3f9, 30px 0 0 0 #9cbfd2, 45px 0 0 0 #749cb0;
+}
+
+.green-ecosystem .house .front .big-window::after {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 10px;
+  background-color: #736c50;
+  bottom: -8px;
+  left: -5px;
+}
+
+.green-ecosystem .house .front .big-window::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 5px;
+  background-color: #6c9eb6;
+  box-shadow: 30px 0 0 0 #bae7f8;
+}
+
+.green-ecosystem .house .front .side-window1 {
+  height: 5rem;
+  /* background: #adc291; */
+  position: absolute;
+  top: -50px;
+  border-bottom: 50px solid #e35354;
+  border-left: 43px solid transparent;
+  border-right: 100px solid transparent;
+  border-right: 45px solid transparent;
+}
+
+.green-ecosystem .house .front .side-window1::before {
+  position: absolute;
+  content: "";
+  top: 34px;
+  left: -75px;
+  height: 10px;
+  width: 9.4rem;
+  background: #754c30;
+  transform: rotateZ(-49deg);
+  border-radius: 11px;
+}
+
+.green-ecosystem .house .front .side-window1::after {
+  position: absolute;
+  content: "";
+  top: 32px;
+  right: -75px;
+  height: 10px;
+  width: 9.4rem;
+  background: #754c30;
+  transform: rotateZ(49deg);
+  border-radius: 11px;
+}
+
+.green-ecosystem .solar-panel1 {
+  height: 39px;
+  width: 60px;
+  background: #90d2bc;
+  position: absolute;
+  top: 38rem;
+  right: 12rem;
+}
+
+.green-ecosystem .solar-panel1::before {
+  position: absolute;
+  content: "";
+  top: 40px;
+  width: 6px;
+  height: 14px;
+  background: #90d2bc;
+  left: 42%;
+}
+
+.green-ecosystem .solar-panel1::after {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 15px;
+  left: 3px;
+  top: 3px;
+  background: #6e8595;
+  box-shadow: 19px 0 0 0 #6e8595, 0 18px 0 0 #6e8595, 38px 18px 0 0 #6e8595,
+    19px 18px 0 0 #6e85a5, 38px 0px 0 0 #6e8595;
+}
+
+.green-ecosystem .solar-panel2 {
+  height: 39px;
+  width: 60px;
+  background: #90d2bc;
+  position: absolute;
+  top: 38rem;
+  right: 5rem;
+}
+
+.green-ecosystem .solar-panel2::before {
+  position: absolute;
+  content: "";
+  top: 40px;
+  width: 6px;
+  height: 14px;
+  background: #90d2bc;
+  left: 42%;
+}
+
+.green-ecosystem .solar-panel2::after {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 15px;
+  left: 3px;
+  top: 3px;
+  background: #6e8595;
+  box-shadow: 19px 0 0 0 #6e8595, 0 18px 0 0 #6e8595, 38px 18px 0 0 #6e8595,
+    19px 18px 0 0 #6e85a5, 38px 0px 0 0 #6e8595;
+}
+
+.green-ecosystem .park-bench {
+  position: absolute;
+  width: 7.3rem;
+  height: 3rem;
+  background: #0c7152;
+  top: 39.2rem;
+  right: 34rem;
+}
+
+.green-ecosystem .park-bench::before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  background: #e1e9ee;
+  height: 24px;
+  top: 3px;
+  left: 3px;
+  box-shadow: 23px 0 0 0 #e1e9ee, 46px 0 0 0 #e1e9ee;
+}
+
+.green-ecosystem .park-bench::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 12px;
+  background: #02412e;
+  top: 30px;
+  left: 6px;
+  box-shadow: 57px 0 0 0 #02412e;
+}
+
+.green-ecosystem .windmill1 {
+  position: absolute;
+  top: 31rem;
+  right: 15rem;
+}
+
+.green-ecosystem .windmill1 .windmill-body {
+  width: 8px;
+  height: 170px;
+  background: #f5f7fa;
+  border-radius: 5px / 70px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  left: 211px;
+}
+
+.green-ecosystem .windmill1 .windmill-wing1 {
+  width: 8px;
+  position: absolute;
+  height: 96px;
+  background: #f5f7fa;
+  border-radius: 4px / 60px;
+  /* left: 8px; */
+  top: -4rem;
+  transform: rotate(30deg);
+  animation: rotate 5s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+.green-ecosystem .windmill1 .windmill-wing2 {
+  width: 8px;
+  position: absolute;
+  height: 96px;
+  background: #f5f7fa;
+  border-radius: 4px / 60px;
+  left: -1px;
+  top: -4rem;
+  transform: rotate(120deg);
+  animation: rotate2 5s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+.green-ecosystem .windmill2 {
+  position: absolute;
+  top: 24rem;
+  right: 10rem;
+}
+
+.green-ecosystem .windmill2 .windmill-body {
+  width: 8px;
+  height: 200px;
+  background: #f5f7fa;
+  border-radius: 5px / 70px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  left: 211px;
+}
+
+.green-ecosystem .windmill2 .windmill-wing1 {
+  width: 8px;
+  position: absolute;
+  height: 96px;
+  background: #f5f7fa;
+  border-radius: 4px / 60px;
+  /* left: 8px; */
+  top: -4rem;
+  transform: rotate(30deg);
+  animation: rotate 5s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+.green-ecosystem .windmill2 .windmill-wing2 {
+  width: 8px;
+  position: absolute;
+  height: 96px;
+  background: #f5f7fa;
+  border-radius: 4px / 60px;
+  left: -1px;
+  top: -4rem;
+  transform: rotate(120deg);
+  animation: rotate2 5s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+.green-ecosystem .cloud8 {
+  width: 6rem;
+  height: 1.2rem;
+  background-color: #fffefe;
+  position: absolute;
+  top: 29.75rem;
+  left: 32.5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -3px -3px 0 #fefde3 inset;
+  z-index: 1;
+}
+
+.green-ecosystem .cloud8 div {
+  position: absolute;
+  content: "";
+  width: 36px;
+  height: 3rem;
+  border-radius: 50%;
+  background: #fffefe;
+  top: -18px;
+  left: 1rem;
+  box-shadow: -3px -10px 0 #fefde3 inset;
+}
+
+.green-ecosystem .cloud7 {
+  width: 10rem;
+  height: 16px;
+  background-color: #a3e4fe;
+  position: absolute;
+  top: 25.5rem;
+  left: 46.5rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 16px;
+  box-shadow: 3px -6px 0 #93dafc inset;
+}
+
+.green-ecosystem .cloud7 div {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background: #a3e4fe;
+  border-radius: 50%;
+  top: -24px;
+  left: 26px;
+  box-shadow: -3px -10px 0 #93dafc inset;
+}
+
+.green-ecosystem .cloud7::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background: #a3e4fe;
+  border-radius: 50%;
+  top: -12px;
+  left: 6rem;
+  box-shadow: -3px -10px 0 #93dafc inset;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(50deg);
+  }
+  to {
+    transform: rotate(420deg);
+  }
+}
+@keyframes rotate2 {
+  from {
+    transform: rotate(120deg);
+  }
+  to {
+    transform: rotate(480deg);
+  }
+}
+
+.green-ecosystem .rainbow {
+  width: 470px;
+  height: 210px;
+  left: 100px;
+  bottom: 82px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  top: 22rem;
+  left: 36rem;
+  opacity: 0.7;
+}
+
+.green-ecosystem .rainbow .rainbow-colour {
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  border-bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  bottom: 0;
+  border-bottom: 0 !important;
+  position: absolute;
+}
+
+.green-ecosystem .rainbow-colour:nth-child(1) {
+  border: 10px solid #ac01fd;
+  height: 100%;
+  width: 100%;
+}
+
+.green-ecosystem .rainbow-colour:nth-child(2) {
+  border: 10px solid #511ce0;
+  height: 261px;
+  width: 581px;
+}
+
+.green-ecosystem .rainbow-colour:nth-child(3) {
+  border: 10px solid #1a9fe2;
+  height: 252px;
+  width: 562px;
+}
+
+.green-ecosystem .rainbow-colour:nth-child(4) {
+  border: 10px solid #5ed81d;
+  height: 243px;
+  width: 543px;
+}
+
+.green-ecosystem .rainbow-colour:nth-child(5) {
+  border: 10px solid #f8f52a;
+  height: 234px;
+  width: 524px;
+}
+
+.green-ecosystem .rainbow-colour:nth-child(6) {
+  border: 10px solid #f7a528;
+  height: 225px;
+  width: 505px;
+}
+
+.green-ecosystem .rainbow-colour:nth-child(7) {
+  border: 10px solid #f63b2a;
+  height: 216px;
+  width: 486px;
+}
+/* .green-ecosystem .windmill2 {
+} */
+
+.green-ecosystem .fish {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: 17px;
+  margin: auto;
+  top: 11rem;
+  left: 0;
+  right: 0;
+  background-color: #fed94c;
+  border-radius: 50%;
+  box-shadow: -3px 0 10px -4px #000;
+}
+
+.green-ecosystem .fish::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  top: 5px;
+  left: 0.7rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+.green-ecosystem .fish::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 12px;
+  left: 38px;
+  top: 3px;
+  border-left: 15px solid #ffc60d;
+  border-radius: 50%;
+}
+
+.green-ecosystem .fish2 {
+  top: 14rem;
+  left: 7rem;
+}
+
+.green-ecosystem .fish3 {
+  top: 14rem;
+  /* height: 15px; */
+  left: -10rem;
+}
+
+.green-ecosystem .water2 {
+  width: 9.5rem;
+  height: 1.4rem;
+  position: absolute;
+  background: #89d2e1;
+  top: 2rem;
+  border-radius: 10px;
+  right: 7rem;
+}
+
+.green-ecosystem .water2::after {
+  position: absolute;
+  content: "";
+  height: 1.3rem;
+  width: 5rem;
+  background-color: #89d2e1;
+  border-radius: 10px;
+  top: 3rem;
+  right: -1rem;
+}
+
+.green-ecosystem .water3 {
+  width: 5.5rem;
+  height: 1.4rem;
+  position: absolute;
+  background: #89d2e1;
+  top: 4rem;
+  border-radius: 10px;
+  right: 17rem;
+}
+
+.green-ecosystem .upper-ground {
+  width: 63rem;
+  height: 2rem;
+  border-radius: 10px;
+  background: #009a67;
+  position: absolute;
+  top: 42.5rem;
+  left: 6.5rem;
+}
+
+.green-ecosystem .thick-grass {
+  width: 68rem;
+  height: 1.6rem;
+  border-radius: 10px;
+  background: #007449;
+  position: absolute;
+  top: 44.5rem;
+  left: 4rem;
+}
+
+.green-ecosystem .coast {
+  width: 54rem;
+  height: 1.6rem;
+  border-radius: 10px;
+  background: #82898c;
+  position: absolute;
+  top: 46rem;
+  left: 11rem;
+}
+
+.green-ecosystem .right {
+  /* width: 50%; */
+  height: 100%;
+  background-color: #d4eff9;
+  position: absolute;
+  right: 0;
+  /* z-index: 5; */
+}
+
+.polluted-ecosystem {
+  width: 75rem;
+  height: 70rem;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  opacity: 1;
+  z-index: 5;
+}
+.polluted-ecosystem .left {
+  width: 100%;
+  height: 100%;
+  background-color: #dddddd;
+  position: relative;
+  /* z-index: 5; */
+  /* opacity: 0.4; */
+}
+
+.polluted-ecosystem .upper-ground {
+  width: 63rem;
+  height: 2rem;
+  border-radius: 10px;
+  background: #df9f48;
+  position: absolute;
+  top: 42.5rem;
+  left: 6.5rem;
+}
+
+.polluted-ecosystem .brown-land {
+  width: 68rem;
+  height: 1.6rem;
+  border-radius: 10px;
+  background: #c06d30;
+  position: absolute;
+  top: 44.5rem;
+  left: 4rem;
+}
+
+.polluted-ecosystem .coast {
+  width: 54rem;
+  height: 1.6rem;
+  border-radius: 10px;
+  background: #82898c;
+  position: absolute;
+  top: 46rem;
+  left: 11rem;
+}
+
+.polluted-ecosystem .apartment {
+  width: 14rem;
+  height: 13rem;
+  position: absolute;
+  top: 31rem;
+  right: 10rem;
+  background-image: linear-gradient(90deg, #777278 0, #777278 73%, #a6a2a3 73%);
+}
+
+.polluted-ecosystem .apartment::after {
+  position: absolute;
+  content: "";
+  width: 15rem;
+  height: 0.8rem;
+  top: -7px;
+  background: #524f4e;
+  left: -5px;
+  border-radius: 5px;
+  box-shadow: 0 11.7rem 0 0 #524f4e;
+}
+
+.polluted-ecosystem .apartment::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 15px;
+  background: #eeecee;
+  top: 25px;
+  left: 15px;
+  box-shadow: 20px 0 0 0 #eeecee, 40px 0 0 0 #eeecee, 60px 0 0 0 #eeecee,
+    80px 0 0 0 #eeecee, 100px 0 0 0 #eeecee, 0 25px 0 0 #eeecee,
+    20px 25px 0 0 #eeecee, 40px 25px 0 0 #eeecee, 60px 25px 0 0 #eeecee,
+    80px 25px 0 0 #eeecee, 100px 25px 0 0 #eeecee, 0 50px 0 0 #eeecee,
+    20px 50px 0 0 #eeecee, 40px 50px 0 0 #eeecee, 60px 50px 0 0 #eeecee,
+    80px 50px 0 0 #eeecee, 100px 50px 0 0 #eeecee;
+}
+
+.polluted-ecosystem .chimney1 {
+  width: 7rem;
+  height: 21rem;
+  background: #747273;
+  top: 22rem;
+  position: absolute;
+  right: 30rem;
+  clip-path: polygon(27% 0, 70% 0, 80% 100%, 16% 100%);
+  background-image: linear-gradient(90deg, #747273 0, #747273 50%, #a4a2a3 50%);
+}
+
+.polluted-ecosystem .chimney1::before {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 1rem;
+  top: 5rem;
+  left: 13px;
+  background: #eeeced;
+}
+
+.polluted-ecosystem .chimney1::after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 2rem;
+  top: 8rem;
+  left: 13px;
+  background: #eeeced;
+}
+
+.polluted-ecosystem .chimney2 {
+  width: 6rem;
+  height: 18rem;
+  background: #747273;
+  top: 25rem;
+  position: absolute;
+  right: 24rem;
+  clip-path: polygon(27% 0, 70% 0, 80% 100%, 16% 100%);
+  background-image: linear-gradient(90deg, #747273 0, #747273 50%, #a4a2a3 50%);
+}
+
+.polluted-ecosystem .chimney2::before {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 1rem;
+  top: 5rem;
+  left: 13px;
+  background: #eeeced;
+}
+
+.polluted-ecosystem .chimney2::after {
+  position: absolute;
+  content: "";
+  width: 6rem;
+  height: 2rem;
+  top: 8rem;
+  left: 12px;
+  background: #eeeced;
+}
+
+.polluted-ecosystem .building-behind {
+  width: 18rem;
+  height: 14rem;
+  left: 35rem;
+  background: #665554;
+  position: absolute;
+  top: 29rem;
+}
+
+.polluted-ecosystem .building-behind::after {
+  position: absolute;
+  content: "";
+  top: 4rem;
+  width: 100%;
+  height: 1rem;
+  background: #decccb;
+}
+
+.polluted-ecosystem .building-behind::before {
+  position: absolute;
+  content: "";
+  top: 7rem;
+  width: 15px;
+  height: 3rem;
+  background: #decccb;
+  box-shadow: 17px 0 0 0 #decccb, 34px 0 0 0 #decccb, 51px 0 0 0 #decccb,
+    68px 0 0 0 #decccb, 85px 0 0 0 #decccb, 102px 0 0 0 #decccb,
+    119px 0 0 0 #decccb, 127px 0 0 0 #decccb, 144px 0 0 0 #decccb,
+    161px 0 0 0 #decccb, 178px 0 0 0 #decccb, 195px 0 0 0 #decccb,
+    212px 0 0 0 #decccb;
+}
+
+.polluted-ecosystem .sea .upper {
+  background-color: #c9c7c8;
+}
+
+.polluted-ecosystem .sea .lower {
+  background-color: #acadb2;
+}
+
+.polluted-ecosystem .sea .upper .water {
+  background-color: #acadb1;
+}
+
+.polluted-ecosystem .sea .upper .water::after {
+  background-color: #acadb1;
+}
+
+.polluted-ecosystem .sea .upper .water::before {
+  background-color: #acadb1;
+}
+
+.polluted-ecosystem .water2 {
+  width: 9.5rem;
+  height: 1.4rem;
+  position: absolute;
+  background: #acadb1;
+  top: 2rem;
+  border-radius: 10px;
+  right: 7rem;
+}
+
+.polluted-ecosystem .water2::after {
+  position: absolute;
+  content: "";
+  height: 1.3rem;
+  width: 5rem;
+  background-color: #acadb1;
+  border-radius: 10px;
+  top: 3rem;
+  right: -1rem;
+}
+
+.polluted-ecosystem .water3 {
+  width: 5.5rem;
+  height: 1.4rem;
+  position: absolute;
+  background: #acadb1;
+  top: 4rem;
+  border-radius: 10px;
+  right: 17rem;
+}
+
+.polluted-ecosystem .cloud1 {
+  width: 7rem;
+  height: 1.2rem;
+  background-color: #97979f;
+  position: absolute;
+  top: 26.75rem;
+  left: 3.5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -3px -4px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud1::before {
+  width: 5.15rem;
+  height: 1.2rem;
+  content: "";
+  top: -1.1rem;
+  left: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #97979f;
+  position: absolute;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud1::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 3rem;
+  border-radius: 50%;
+  background: #97979f;
+  top: -22px;
+  left: 21px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud3 {
+  width: 4rem;
+  height: 1.2rem;
+  background-color: #97979f;
+  position: absolute;
+  top: 21.5rem;
+  right: 10.85rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 16px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud3::before {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #97979f;
+  top: -9px;
+  left: 12px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud4 {
+  width: 10rem;
+  height: 16px;
+  background-color: #97979f;
+  position: absolute;
+  top: 19.5rem;
+  left: 30.5rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 16px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud4::before {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background: #97979f;
+  border-radius: 50%;
+  top: -24px;
+  left: 26px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud4::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background: #97979f;
+  border-radius: 50%;
+  top: -12px;
+  left: 6rem;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud5 {
+  width: 10rem;
+  height: 16px;
+  background-color: #97979f;
+  position: absolute;
+  top: 19.5rem;
+  left: 30.5rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 16px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud5::before {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background: #97979f;
+  border-radius: 50%;
+  top: -24px;
+  left: 26px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud5::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background: #97979f;
+  border-radius: 50%;
+  top: -12px;
+  left: 6rem;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud6 {
+  width: 10rem;
+  height: 16px;
+  background-color: #97979f;
+  position: absolute;
+  top: 19.5rem;
+  left: 30.5rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 16px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud6::before {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background: #97979f;
+  border-radius: 50%;
+  top: -24px;
+  left: 26px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud6::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background: #97979f;
+  border-radius: 50%;
+  top: -12px;
+  left: 6rem;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud8 {
+  width: 6rem;
+  height: 1.2rem;
+  background-color: #97979f;
+  position: absolute;
+  top: 25.75rem;
+  right: 15.5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: -3px -3px 0 #8f8d8c inset;
+  z-index: 1;
+}
+
+.polluted-ecosystem .cloud8 div {
+  position: absolute;
+  content: "";
+  width: 36px;
+  height: 3rem;
+  border-radius: 50%;
+  background: #97979f;
+  top: -18px;
+  left: 1rem;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud7 {
+  width: 10rem;
+  height: 16px;
+  background-color: #97979f;
+  position: absolute;
+  top: 15.5rem;
+  left: 13.5rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 16px;
+  box-shadow: 3px -6px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud7 div {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background: #97979f;
+  border-radius: 50%;
+  top: -24px;
+  left: 26px;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .cloud7::after {
+  position: absolute;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background: #97979f;
+  border-radius: 50%;
+  top: -12px;
+  left: 6rem;
+  box-shadow: -3px -10px 0 #8f8d8c inset;
+}
+
+.polluted-ecosystem .building-with-dish {
+  width: 12rem;
+  position: absolute;
+  height: 17rem;
+  top: 26rem;
+  left: 27rem;
+  /* z-index: 2; */
+  background: #bfb4b1;
+  background-image: linear-gradient(90deg, #bfb4b1 0, #bfb4b1 50%, #97928d 50%);
+}
+
+.polluted-ecosystem .building-with-dish::before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 16px;
+  top: 3rem;
+  left: 1.5rem;
+  background: #422c2e;
+  box-shadow: 25px 0 0 0 #0a628b, 50px 0 0 0 #0a628b, 75px 0 0 0 #0a628b,
+    0 25px 0 0 #0a628b, 50px 25px 0 0 #422c2e, 75px 25px 0 0 #0a628b,
+    0 50px 0 0 #422c2e, 25px 50px 0 0 #422c2e, 50px 50px 0 0 #0a628b,
+    75px 50px 0 0 #422c2e, 0 75px 0 0 #0a628b, 25px 75px 0 0 #0a628b,
+    50px 75px 0 0 #422c2e, 75px 0 0 0 #0a628b;
+}
+
+.polluted-ecosystem .building-with-dish::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 15px;
+  background: #422c2e;
+}
+
+.polluted-ecosystem .building-with-dish .dish {
+  width: 27px;
+  height: 45px;
+  position: absolute;
+  top: -4rem;
+  left: 3rem;
+  background: #0b5f83;
+  border-radius: 50%;
+  /* overflow: hidden; */
+  transform: rotateZ(56deg);
+}
+
+.polluted-ecosystem .building-with-dish .dish::before {
+  position: absolute;
+  content: "";
+  left: -2px;
+  background: #f9fafa;
+  width: 23px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.polluted-ecosystem .building-with-dish .dish::after {
+  position: absolute;
+  content: "";
+  bottom: 18px;
+  width: 4px;
+  height: 10px;
+  right: -4px;
+  background: #0b5f83;
+  transform: rotateZ(125deg);
+  z-index: 0;
+}
+
+.polluted-ecosystem .tank-building {
+  position: absolute;
+  width: 18rem;
+  height: 12rem;
+  top: 33rem;
+  left: 15rem;
+}
+
+.polluted-ecosystem .tank-building .entrance {
+  width: 100%;
+  height: 46px;
+  background: #9a6818;
+  position: absolute;
+  top: 5rem;
+}
+
+.polluted-ecosystem .tank-building .entrance::before {
+  position: absolute;
+  content: "";
+  width: 29px;
+  top: 2rem;
+  left: 1rem;
+  height: 75px;
+  border-radius: 50%;
+  background-image: linear-gradient(90deg, #6d4a49 0, #6d4a49 50%, #241720 50%);
+}
+.polluted-ecosystem .tank-building .discharge-room {
+  position: absolute;
+  width: 11rem;
+  height: 35px;
+  background: #4f392e;
+  top: 6rem;
+  right: 1rem;
+}
+
+.polluted-ecosystem .tank-building .discharge-room::after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 10px;
+  width: 88px;
+  height: 5px;
+  background: #716d4b;
+}
+
+.polluted-ecosystem .tank-building .discharge-room::before {
+  position: absolute;
+  content: "";
+  top: 1rem;
+  left: 15px;
+  width: 20px;
+  height: 10px;
+  background: #74a1b9;
+  box-shadow: 20px 0 0 0 #4b6e83, 40px 0 0 0 #7f9cae, 60px 0 0 0 #648898;
+}
+
+.polluted-ecosystem .tank-building .tank {
+  width: 65px;
+  position: absolute;
+  height: 103px;
+  top: -3rem;
+  left: 2rem;
+  background: #c79438;
+  /* border-top-left-radius: 34px; */
+  /* border-top-right-radius: 10px; */
+  border-radius: 75% 74% 0% 0%;
+  background-image: linear-gradient(90deg, #c79438 0, #c79438 50%, #7f5f4a 50%);
+}
+
+.polluted-ecosystem .tank-building .tank::after {
+  position: absolute;
+  content: "";
+  left: 12.5px;
+  width: 40px;
+  height: 9px;
+  background: #7a4a4c;
+}
+
+.polluted-ecosystem .tank-building .tank2 {
+  left: 10rem;
+}
+
+.polluted-ecosystem .tank-building .pipe {
+  position: absolute;
+  top: 9rem;
+  width: 1rem;
+  height: 4.75rem;
+  /* background: red; */
+  z-index: 4;
+  left: 9rem;
+}
+
+.polluted-ecosystem .tank-building .pipe .pipe1 {
+  position: absolute;
+  width: 1rem;
+  height: 8rem;
+  top: -1.5rem;
+  background: #834e2f;
+  transform: rotateZ(45deg);
+  clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+}
+
+.polluted-ecosystem .tank-building .pipe .pipe2 {
+  position: absolute;
+  width: 2rem;
+  height: 8rem;
+  top: 3.85rem;
+  background: #834e2f;
+  transform: rotateZ(-45deg);
+  clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+}
+
+.polluted-ecosystem .tank-building .pipe .rim1 {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #996444;
+  border-radius: 50%;
+  left: -27px;
+  /* right: 4px; */
+  bottom: -9px;
+}
+
+.polluted-ecosystem .tank-building .pipe .rim2 {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #996444;
+  border-radius: 50%;
+  left: 28px;
+  top: -7px;
+}
+
+.polluted-ecosystem .tank-building .pipe .rim3 {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 21px;
+  background: #3f3832;
+  bottom: -70px;
+  left: 28px;
+  border-radius: 50%;
+  z-index: 10;
+  border: 3px solid #bb8c35;
+}
+
+.polluted-ecosystem .tank-building .dirt1 {
+  position: absolute;
+  width: 7rem;
+  height: 1.25rem;
+  /* background: #8A8738; */
+  bottom: -7.5rem;
+  left: 3.2rem;
+  border-radius: 50%;
+  transform: rotate(12deg);
+  z-index: 11;
+  overflow: hidden;
+}
+
+.polluted-ecosystem .tank-building .dirt1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 14px;
+  /* margin-top: -9px; */
+  /* background: radial-gradient( closest-side, #962d61, #732a4f 99%, transparent 99% ); */
+  /* background-size: 70% 0%; */
+  background: radial-gradient(
+    circle farthest-corner at 50% -15%,
+    transparent 30%,
+    #746563 30%,
+    #746563 45%,
+    #8a8738 45%,
+    #8a8738 60%,
+    #8a8738 60%,
+    #8a8738 75%,
+    transparent 75%
+  );
+  background-size: 15% 93%;
+}
+
+.polluted-ecosystem .tank-building .dirt1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 14px;
+  margin-top: -7px;
+  background: radial-gradient(
+    closest-side,
+    transparent,
+    transparent 99%,
+    transparent 99%
+  );
+  background-size: 24% 98%;
+}
+
+.polluted-ecosystem .office {
+  position: absolute;
+  width: 20rem;
+  height: 10rem;
+  background: #c5bea2;
+  top: 35rem;
+  left: 9rem;
+}
+
+.polluted-ecosystem .office::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 25px;
+  background: #a2b1a5;
+  box-shadow: 15px 0 0 0 #8e9d93, 30px 0 0 0 #283636, 45px 0 0 0 #9cab9f,
+    60px 0 0 0 #798e85, 75px 0 0 0 #43604a, 90px 0 0 0 #8e9d93,
+    105px 0 0 0 #798e85, 120px 0 0 0 #3c504f, 135px 0 0 0 #283636,
+    0 30px 0 0 #798e85, 15px 30px 0 0 #9cab9f, 30px 30px 0 0 #7a897d,
+    45px 30px 0 0 #9cab9f, 60px 30px 0 0 #798e85, 75px 30px 0 0 #43604a,
+    90px 30px 0 0 #8e9d93, 105px 30px 0 0 #798e85, 120px 30px 0 0 #3c504f,
+    135px 30px 0 0 #283636;
+}
+
+.polluted-ecosystem .office::after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  width: 100%;
+  background: #6f5344;
+  height: 10px;
+}
+
+.polluted-ecosystem .tower {
+  position: absolute;
+  top: 20rem;
+  width: 5rem;
+  left: 13rem;
+  height: 17rem;
+  background: #88949a;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.polluted-ecosystem .tower-top1 {
+  position: absolute;
+  top: 24rem;
+  width: 12rem;
+  background: #4c636c;
+  height: 2rem;
+  left: 9.5rem;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  opacity: 0.6;
+}
+
+.polluted-ecosystem .tower-top2 {
+  position: absolute;
+  top: 28rem;
+  width: 7rem;
+  background: #4c636c;
+  height: 2rem;
+  left: 12rem;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  opacity: 0.6;
+}
+
+.polluted-ecosystem .oil-container {
+  height: 8rem;
+  position: absolute;
+  left: 10rem;
+  top: -1rem;
+  width: 5rem;
+  background: #49583e;
+  transform: rotateZ(-15deg);
+}
+
+.polluted-ecosystem .oil-container::before {
+  position: absolute;
+  content: "";
+  width: 6rem;
+  height: 0.6rem;
+  left: -6px;
+  border-radius: 5px;
+  background: #49583e;
+}
+
+.polluted-ecosystem .oil-container::after {
+  position: absolute;
+  content: "";
+  width: 6rem;
+  height: 0.6rem;
+  top: 27px;
+  left: -6px;
+  border-radius: 5px;
+  background: #49583e;
+}
+
+.polluted-ecosystem .juice-bottle {
+  position: absolute;
+  top: 6rem;
+  left: 18rem;
+  width: 4.3rem;
+  height: 2.7rem;
+  background: #938373;
+  transform: rotateZ(-45deg);
+  background-image: linear-gradient(90deg, #766352 0, #766352 30%, #938373 30%);
+  /* clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); */
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+}
+
+.polluted-ecosystem .juice-bottle::before {
+  position: absolute;
+  content: "";
+  background: #bcafa1;
+  width: 5px;
+  height: 28px;
+  left: 4rem;
+}
+
+.polluted-ecosystem .bottle {
+  position: absolute;
+  width: 2.2rem;
+  height: 5rem;
+  top: 4rem;
+  right: 13rem;
+  background: #7baea9;
+  border-radius: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotateZ(-45deg);
+}
+.polluted-ecosystem .bottle::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 9px;
+  border-radius: 40%;
+  background: #466770;
+  left: 6px;
+  top: -7px;
+}
+
+.polluted-ecosystem .bottle::after {
+  top: 15px;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 12px;
+  background: #466770;
+  border-radius: 2px;
+}
+
+.polluted-ecosystem .dead-fish {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: 17px;
+  margin: auto;
+  top: -1rem;
+  left: 20rem;
+  background-color: #49bab5;
+  background-color: #fed94c;
+  background-color: #97928d;
+  border-radius: 50%;
+  transform: rotateZ(160deg);
+}
+
+.polluted-ecosystem .dead-fish::before {
+  position: absolute;
+  width: 0px;
+  height: 4px;
+  background-color: #000;
+  top: 3px;
+  left: 0.7rem;
+  z-index: 1;
+  content: "\2716";
+  font-size: 8px;
+  color: #676060;
+}
+.polluted-ecosystem .dead-fish::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 12px;
+  left: 38px;
+  top: 3px;
+  border-left: 15px solid #53bba7;
+  border-left: 15px solid #ffc60d;
+  border-left: 15px solid #97928d;
+  border-radius: 50%;
+}
+
+.polluted-ecosystem .dead-fish2 {
+  left: 12rem;
+  top: -5rem;
+  transform: rotateZ(45deg);
+}
+
+.polluted-ecosystem .smoke1 {
+  position: absolute;
+  right: 32.7rem;
+  width: 20px;
+  top: 19rem;
+  height: 20px;
+  border-radius: 50%;
+  background: #adadb2;
+  transform-origin: center center 0px;
+  animation: smokey 5s ease-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.polluted-ecosystem .smoke2 {
+  position: absolute;
+  right: 30.7rem;
+  width: 25px;
+  top: 16rem;
+  height: 25px;
+  border-radius: 50%;
+  background: #cac8c9;
+  transform-origin: center center 0px;
+  animation: smokey 5s ease-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.polluted-ecosystem .smoke3 {
+  position: absolute;
+  right: 26.7rem;
+  width: 45px;
+  top: 13rem;
+  height: 22px;
+  border-radius: 20px;
+  background: #acadb2;
+  transform-origin: center center 0px;
+  animation: smokey 5s ease-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.polluted-ecosystem .smoke5 {
+  position: absolute;
+  right: 26.7rem;
+  width: 15px;
+  top: 23rem;
+  height: 15px;
+  border-radius: 50%;
+  background: #cac8c9;
+  transform-origin: center center 0px;
+  animation: smokey 5s ease-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.polluted-ecosystem .smoke6 {
+  position: absolute;
+  right: 23.7rem;
+  width: 25px;
+  top: 20rem;
+  height: 25px;
+  border-radius: 50%;
+  background: #acadb2;
+  transform-origin: center center 0px;
+  animation: smokey 5s ease-out infinite;
+  animation-fill-mode: forwards;
+}
+
+.polluted-ecosystem .smoke7 {
+  position: absolute;
+  right: 21.7rem;
+  width: 25px;
+  top: 17rem;
+  height: 25px;
+  border-radius: 50%;
+  background: #cac8c9;
+  transform-origin: center center 0px;
+  animation: smokey 5s ease-out infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes smokey {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.slider {
+  width: 3px;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 6;
+  left: 46.5%;
+}
+
+.slider .pointer {
+  position: absolute;
+  z-index: 14;
+  cursor: ew-resize;
+  width: 40px;
+  height: 40px;
+  background-color: #2196f3;
+  opacity: 0.7;
+  border-radius: 50%;
+  top: 30rem;
+  left: -1.7rem;
+}
+
+.polluted-ecosystem .right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #dddddd;
+  left: 0;
+}
+
+.green,
+.polluted {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+}
+
+.polluted {
+  width: 35rem;
+  max-width: 75rem;
+}

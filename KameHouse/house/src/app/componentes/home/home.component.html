@@ -1,0 +1,252 @@
+<div #background class="background">
+  
+  <div *ngIf="temperatura >= 25 && luz >200 && humedad <= 30">
+    <div class="stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+    </div>
+
+    <div class="moon"></div>
+
+    <div class="fstars">
+      <div class="fstar"></div>
+      <div class="fstar"></div>
+      <div class="fstar"></div>
+    </div>
+  </div>
+  <div *ngIf="temperatura >= 30 && luz <=150">
+    <div class="sun">
+      <div class="circle" disabled></div>
+      <div class="sunrays">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="humedad >30 && temperatura<30">
+    <i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i
+      class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i>
+  </div>
+  <div #sea class="sea"></div>
+  <div #clouds class="clouds" >
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+  </div>
+</div>
+<div class="magic-cloud">
+  <div class="cloud-1"></div>
+  <div class="cloud-2"></div>
+  <div class="cloud-3"></div>
+  <div class="cloud-4"></div>
+  <div class="cloud-5"></div>
+</div>
+<div class="container-island">
+  <div class="waves">
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="wave wave-3"></div>
+  </div>
+  <div class="island">
+    <div class="green"></div>
+  </div>
+  <div class="bushs">
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+    <div class="bush"></div>
+  </div>
+  <div class="rock">
+    <div class="rock-1"></div>
+    <div class="rock-2"></div>
+  </div>
+  <div class="tree tree-left">
+    <div class="leaf leaf-1"></div>
+    <div class="leaf leaf-2"></div>
+    <div class="leaf leaf-3"></div>
+    <div class="leaf leaf-4"></div>
+    <div class="leaf leaf-5"></div>
+  </div>
+  <div class="tree tree-middle">
+    <div class="leaf leaf-1"></div>
+    <div class="leaf leaf-2"></div>
+    <div class="leaf leaf-3"></div>
+    <div class="leaf leaf-4"></div>
+    <div class="leaf leaf-5"></div>
+  </div>
+  <div class="tree tree-right">
+    <div class="leaf leaf-1"></div>
+    <div class="leaf leaf-2"></div>
+    <div class="leaf leaf-3"></div>
+    <div class="leaf leaf-4"></div>
+    <div class="leaf leaf-5"></div>
+  </div>
+  <div class="house">
+    <div class="weathercock">
+      <div class="part-1"></div>
+      <div class="part-2"></div>
+    </div>
+    <div class="face">
+      <div class="roof-border"></div>
+      <div #window class="window">
+        <div class="shutter-left"></div>
+        <div class="shutter-right"></div>
+        <div class="flower"></div>
+      </div>
+      <div class="door">
+        <div class="door-roof"></div>
+        <div class="base"></div>
+        <div class="pillar">
+          <div class="pillar-left"></div>
+          <div class="pillar-right"></div>
+        </div>
+        <div #door class="true-door"></div>
+        <div class="stair">
+          <div class="side-1"></div>
+          <div class="side-2"></div>
+          <div class="step"></div>
+        </div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="window-container">
+        <div #windowLeft class="window-left">
+          <div class="tile-1"></div>
+          <div class="tile-2"></div>
+        </div>
+        <div #windowRigth class="window-right">
+          <div class="tile-1"></div>
+          <div class="tile-2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="roof"></div>
+    <div class="skylight">
+      <div class="skylight-roof"></div>
+      <div class="roof-border"></div>
+      <div class="window">
+        <div #tileT class="tile-top"></div>
+        <div #tileB class="tile-bot"></div>
+      </div>
+    </div>
+    <div class="text">KAME <br> HOUSE</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <h2
+        style="margin-left: 20px; margin-top: 150px;color: white;font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        Temperatura
+      </h2>
+      <h2
+        style="margin-left: 970px; margin-top: 150px;color: white;font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        Humedad
+      </h2>
+    </div>
+  </div>
+
+</div>
+<div class="termometro row">
+  <div class="col-md-12">
+    <div class="row">
+      <div id="termometer" style="margin-left: 100px;margin-top: 10px;color: white;">
+        <div id="temperature" style="height:0" data-value="0°C"></div>
+        <div id="graduations"></div>
+      </div>
+      <label style="margin-left:550px;" class="switch">
+        <input type="checkbox" class="chk" value="{{servo}}" (change)="handleCheckboxChangeS($event, '3')"
+          [checked]="checkboxStates['servomotor']">
+        <span class="slider"></span>
+      </label>
+      <div id="termometerH" style="margin-left: 550px;margin-top: 10px;color: white;">
+        <div id="temperatureH" style="height:0" data-value="0°C"></div>
+        <div id="graduationsH"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <h5 style="margin-left: 40px;">Planta Baja</h5>
+      <h5 style="margin-left: 1210px">Planta Alta</h5>
+    </div>
+    <div class="row">
+      <input style="margin-left: 20px;" class="l" type="checkbox" value="{{led1}}"
+        (change)="handleCheckboxChange($event, '1')" [checked]="checkboxStates['led1']">
+      <input style="margin-left: 1010px;" class="l1" type="checkbox" value="{{led2}}"
+        (change)="handleCheckboxChange($event, '2')" [checked]="checkboxStates['led2']">
+    </div>
+  </div>
+
+</div>
+<div class="rainbow" *ngIf=" temperatura >= 30 && luz >=20">
+  <div class="rainbow-colour"></div>
+  <div class="rainbow-colour"></div>
+  <div class="rainbow-colour"></div>
+  <div class="rainbow-colour"></div>
+  <div class="rainbow-colour"></div>
+  <div class="rainbow-colour"></div>
+  <div class="rainbow-colour"></div>
+</div>
