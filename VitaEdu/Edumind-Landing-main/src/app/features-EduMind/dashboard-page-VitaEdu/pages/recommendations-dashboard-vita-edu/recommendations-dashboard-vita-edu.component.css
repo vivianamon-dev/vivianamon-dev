@@ -1,0 +1,76 @@
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+  
+.main-content {
+    flex-grow: 1;
+    padding: 2rem 3rem;
+    background-color: #f8f9fa;
+}
+  
+.dashboard-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section-title {
+    color: #114C5F;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.section-description {
+    color: #6c757d;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.add-user-btn {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    background-color: #b7e1ea;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+  
+.add-user-btn:hover {
+    background-color: #0d3a4a;
+}
+  
+.add-user-btn fa-icon {
+    margin-right: 10px;
+}
+
+
+/* Add new styles for ag-grid container */
+.grid-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.ag-theme-alpine {
+    --ag-border-radius: 8px;
+    --ag-row-hover-color: rgba(17, 76, 95, 0.1);
+    --ag-selected-row-background-color: rgba(17, 76, 95, 0.2);
+}
+  
+  
+ 

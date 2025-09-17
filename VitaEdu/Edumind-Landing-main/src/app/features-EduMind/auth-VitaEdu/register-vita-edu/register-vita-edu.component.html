@@ -1,0 +1,123 @@
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg rounded-3">
+    <div class="modal-content rounded-3">
+      <div class="row g-0 rounded-3">
+        <div class="col-lg-6 col-md-12 bg-light">
+          <div class="modal-header-1 position-relative text-center">
+            <h5 class="modal-title text-center" id="registerModalLabel">{{ 'REGISTER' | translate }}</h5>
+            <button type="button" class="btn-close position-absolute top-0 end-0 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <!-- Barra de progreso -->
+          <div class="progress mx-4 mt-3">
+            <div class="progress-bar" role="progressbar" [style.width]="(currentStep / 3 * 100) + '%'" 
+                 [attr.aria-valuenow]="currentStep" aria-valuemin="0" aria-valuemax="3">
+              {{currentStep}}/3
+            </div>
+          </div>
+
+          <div class="modal-body contenido-register">
+            <form [formGroup]="registerForm">
+              <!-- Sección 1: Datos Personales -->
+              <div *ngIf="currentStep === 1">
+                <h6 class="section-title">{{ 'PERSONAL_DATA_REGISTER' | translate }}</h6>
+                <div class="mb-3">
+                  <label for="name" class="form-label cont-text">{{ 'NAME_REGISTER' | translate }}</label>
+                  <input type="text" class="form-control cont-text" id="name" formControlName="name">
+                </div>
+                <div class="mb-3">
+                  <label for="lastName" class="form-label cont-text">{{ 'LASTNAME_REGISTER' | translate }}</label>
+                  <input type="text" class="form-control cont-text" id="lastName" formControlName="lastName">
+                </div>
+                <div class="mb-3">
+                  <label for="age" class="form-label cont-text">{{ 'AGE_REGISTER' | translate }}</label>
+                  <input type="number" class="form-control cont-text" id="age" formControlName="age">
+                </div>
+              </div>
+
+              <!-- Sección 2: Datos Escolares -->
+              <div *ngIf="currentStep === 2">
+                <h6 class="section-title">{{ 'SCHOOL_DATA_REGISTER' | translate }}</h6>
+                <div class="mb-3">
+                  <label for="university" class="form-label cont-text">{{ 'UNIVERSITY_REGISTER' | translate }}</label>
+                  <select class="form-select cont-text" id="university" formControlName="university">
+                    <option value="">{{ 'SELECT_OPTION_REGISTER' | translate }}</option>
+                    <option value="UTCV">Universidad Tecnológica del Centro de Veracruz</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label cont-text">{{ 'EMAIL_REGISTER' | translate }}</label>
+                  <input type="email" class="form-control cont-text" id="email" formControlName="email">
+                </div>
+                <div class="mb-3">
+                  <label for="career" class="form-label cont-text">{{ 'CAREER_REGISTER' | translate }}</label>
+                  <select class="form-select cont-text" id="career" formControlName="career">
+                    <option value="">{{ 'SELECT_OPTION_REGISTER' | translate }}</option>
+                    <option value="TI">Tecnologías de la Información</option>
+                    <option value="GAS">Gastronomía</option>
+                    <option value="TUR">Turismo</option>
+                    <option value="MEC">Mecatrónica</option>
+                    <option value="ER">Energías Renovables</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Sección 3: Contraseña -->
+              <div *ngIf="currentStep === 3">
+                <h6 class="section-title">{{ 'PASSWORD_SECTION_REGISTER' | translate }}</h6>
+                <div class="mb-3">
+                  <label for="password" class="form-label cont-text">{{ 'PASSWORD_REGISTER' | translate }}</label>
+                  <div class="input-group">
+                    <input [type]="showPassword ? 'text' : 'password'" class="form-control cont-text" 
+                           id="password" formControlName="password">
+                    <button class="btn btn-outline-secondary" type="button" (click)="togglePasswordVisibility()">
+                      <fa-icon [icon]="showPassword ? faEye : faEyeSlash"></fa-icon>
+                    </button>
+                  </div>
+                  <small class="form-text text-muted">{{ 'PASSWORD_REQUIREMENTS' | translate }}</small>
+                </div>
+                <div class="mb-3">
+                  <label for="confirmPassword" class="form-label cont-text">{{ 'CONFIRM_PASSWORD_REGISTER' | translate }}</label>
+                  <div class="input-group">
+                    <input [type]="showConfirmPassword ? 'text' : 'password'" class="form-control cont-text" 
+                           id="confirmPassword" formControlName="confirmPassword">
+                    <button class="btn btn-outline-secondary" type="button" (click)="toggleConfirmPasswordVisibility()">
+                      <fa-icon [icon]="showConfirmPassword ? faEye : faEyeSlash"></fa-icon>
+                    </button>
+                  </div>
+                </div>
+                <!-- reCAPTCHA -->
+                <div class="mb-3">
+                  <re-captcha formControlName="recaptcha"></re-captcha>
+                </div>
+              </div>
+
+              <!-- Botones de navegación -->
+              <div class="d-flex justify-content-between mt-4">
+                <button *ngIf="currentStep > 1" type="button" class="btn btn-secondary" 
+                        (click)="previousStep()">{{ 'PREVIOUS_BUTTON' | translate }}</button>
+                <button *ngIf="currentStep < 3" type="button" class="btn btn-register" 
+                        (click)="nextStep()">{{ 'NEXT_BUTTON' | translate }}</button>
+                <button *ngIf="currentStep === 3" type="button" class="btn btn-register" 
+                        (click)="onSubmit()">{{ 'SUBMIT_REGISTER' | translate }}</button>
+              </div>
+            </form>
+
+            <div class="text-center mt-3">
+              <p class="cont-text">{{ 'HAVE_ACCOUNT_REGISTER' | translate }}
+                <a href="#" class="text-primary" (click)="cambiarALogin($event)">
+                  {{ 'LOGIN_LINK_REGISTER' | translate }}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner derecho -->
+        <div class="col-lg-6 col-md-12 banner-register d-flex justify-content-center align-items-center d-none d-lg-block">
+          <img src="../../../../assets/img-EduMind/logos/logo-login.svg" alt="Imagen" class="img-fluid" style="margin-top: 100px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

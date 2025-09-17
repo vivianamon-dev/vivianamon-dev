@@ -1,0 +1,52 @@
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg rounded-3"> <!-- Redondeo en modal-dialog -->
+    <div class="modal-content rounded-3"> <!-- Redondeo en modal-content -->
+      <div class="row g-0 rounded-3">
+        <!-- Lado izquierdo: Formulario de login -->
+        <div class="col-lg-6 col-md-12 bg-light">
+          <div class="modal-header-1 position-relative text-center">  <!-- Se añadió text-center para centrar el título -->
+            <h5 class="modal-title text-center" id="loginModalLabel">{{ 'LOGIN_TITLE' | translate }}</h5>  <!-- Título centrado -->
+            <button type="button" class="btn-close position-absolute top-0 end-0 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <div class="modal-body contenido-login">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="email" class="form-label cont-text">{{ 'LOGIN_EMAIL_LABEL' | translate }}</label>
+                <input type="email" class="form-control cont-text" id="email" formControlName="email" placeholder="{{ 'LOGIN_EMAIL_PLACEHOLDER' | translate }}">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label cont-text">{{ 'LOGIN_PASSWORD_LABEL' | translate }}</label>
+                <div class="input-group">
+                  <input [type]="mostrarPassword ? 'text' : 'password'" class="form-control cont-text" id="password" formControlName="password" placeholder="{{ 'LOGIN_PASSWORD_PLACEHOLDER' | translate }}">
+                  <button class="btn btn-outline-secondary" type="button" (click)="togglePasswordVisibility()">
+                    <fa-icon [icon]="faEyes" size="1x"></fa-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-login">{{ 'LOGIN_SUBMIT_BUTTON' | translate }}</button>
+              </div>
+            </form>
+            <div class="text-center mt-3">
+              <p>{{ 'LOGIN_NO_ACCOUNT_TEXT' | translate }}
+                <a href="#" class="text-primary" (click)="cambiarARegistro($event)">
+                  {{ 'LOGIN_REGISTER_LINK' | translate }}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 banner-login d-flex justify-content-center align-items-center d-none d-lg-block">
+          <img src="../../../../assets/img-EduMind/logos/logo-login.svg" alt="Imagen" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Si tienes botones o enlaces para cambiar el idioma, deberían verse así: -->
+<a href="#" (click)="changeLanguage('es', $event)">ES</a>
+<a href="#" (click)="changeLanguage('en', $event)">EN</a>

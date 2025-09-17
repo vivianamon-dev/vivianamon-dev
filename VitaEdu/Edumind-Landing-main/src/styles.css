@@ -1,0 +1,46 @@
+
+
+*{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+/* Estilos para la animación de reveal */
+[scrollReveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-in-out;
+}
+
+[scrollReveal].reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variantes de delay para elementos secuenciales */
+[scrollReveal][data-delay="1"] {
+  transition-delay: 0.1s;
+}
+
+[scrollReveal][data-delay="2"] {
+  transition-delay: 0.2s;
+}
+
+[scrollReveal][data-delay="3"] {
+  transition-delay: 0.3s;
+}
+
+/* Variantes de dirección */
+[scrollReveal][data-direction="left"] {
+  transform: translateX(-30px);
+}
+
+[scrollReveal][data-direction="right"] {
+  transform: translateX(30px);
+}
+
+[scrollReveal][data-direction="left"].reveal,
+[scrollReveal][data-direction="right"].reveal {
+  transform: translateX(0);
+}

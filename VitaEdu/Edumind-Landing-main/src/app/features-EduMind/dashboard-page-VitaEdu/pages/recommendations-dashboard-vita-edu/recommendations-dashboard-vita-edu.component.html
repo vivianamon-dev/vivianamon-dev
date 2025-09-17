@@ -1,0 +1,76 @@
+<div class="dashboard-container">
+    <app-side-menu-vita-edu></app-side-menu-vita-edu>
+  
+    <div class="main-content mt-5">
+      <div class="grid-container">
+        <div class="">
+            <h1 class="section-title">Mis Recomendaciones</h1>
+            <p class="section-description mb-3">Sistema de gestión para recomendaciones psicológicas y académicas. Aquí podrás editar y dar seguimiento a las recomendaciones para los estudiantes.</p>
+          </div> 
+        <ag-grid-angular
+          class="ag-theme-alpine"
+          style="width: 100%; height: 400px;"
+          [pagination]="true"
+          [paginationPageSize]="10"
+          [animateRows]="true"
+          [rowData]="rowData"
+          [columnDefs]="columnDefs"
+          [gridOptions]="gridOptions"
+        >
+        </ag-grid-angular>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="addRecommendationModal" tabindex="-1" aria-labelledby="addRecommendationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addRecommendationModalLabel">Nueva Recomendación</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="recommendationForm" (ngSubmit)="onSubmit()">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="studentName" class="form-label">Nombre del Estudiante</label>
+                    <input type="text" class="form-control" id="studentName" formControlName="studentName">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="university" class="form-label">Universidad</label>
+                    <select class="form-select" id="university" formControlName="university">
+                      <option value="">Seleccione una universidad</option>
+                      <option value="UTCV">UTCV</option>
+                      <option value="ITO">ITO</option>
+                      <option value="UGM">UGM</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="title" class="form-label">Título de la Recomendación</label>
+                    <input type="text" class="form-control" id="title" formControlName="title">
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="3" formControlName="message"></textarea>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="status" class="form-label">Estado</label>
+                    <select class="form-select" id="status" formControlName="status">
+                      <option value="Pendiente">Pendiente</option>
+                      <option value="En Revisión">En Revisión</option>
+                      <option value="Aprobada">Aprobada</option>
+                      <option value="Rechazada">Rechazada</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="onCancel()">Cancelar</button>
+              <button type="button" class="btn btn-primary" (click)="onSubmit()">Agregar Recomendación</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  
+  

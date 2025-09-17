@@ -1,0 +1,234 @@
+.detail-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.back-button a {
+  color: #114C5F;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.student-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  object-fit: cover;
+}
+
+.student-details h3 {
+  color: #114C5F;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.test-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.status-btn {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.chart-container {
+  height: 300px;
+  margin: 1rem 0;
+}
+
+.stress-cards-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stress-cards-wrapper {
+  display: flex;
+  width: 150px;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stress-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  flex: 1;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
+
+.recommendation-section {
+  margin-top: 1rem;
+}
+
+/* Asegurar que todas las cards tengan la misma altura en su fila */
+.h-100 {
+  height: 100%;
+}
+
+.stress-header {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.stress-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.stress-trend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trend-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.trend-line {
+  width: 50px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.stress-trend.positive {
+  color: #4BC0C0;
+}
+
+.stress-trend.positive .trend-line {
+  background-color: #4BC0C0;
+}
+
+.stress-trend.negative {
+  color: #FF6384;
+}
+
+.stress-trend.negative .trend-line {
+  background-color: #FF6384;
+}
+
+h2 {
+  color: #114C5F;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  color: #114C5F;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #114C5F;
+  border-color: #114C5F;
+}
+
+.btn-primary:hover {
+  background-color: #0d3a4a;
+  border-color: #0d3a4a;
+}
+
+.data-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  max-width: 500px;
+}
+
+.data-card .card-body {
+  padding: 1.5rem;
+}
+
+.options-menu {
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.chart-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.chart-container {
+  flex: 1;
+  max-width: 60%;
+  height: 250px;
+}
+
+.chart-legend {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.bg-primary { background-color: #36A2EB !important; }
+.bg-danger { background-color: #FF6384 !important; }
+.bg-success { background-color: #4BC0C0 !important; }
+.bg-info { background-color: #9966FF !important; }

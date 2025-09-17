@@ -1,0 +1,66 @@
+<app-nav-bar-edu-mind></app-nav-bar-edu-mind>
+<app-social-medial-edu-mind></app-social-medial-edu-mind>
+
+<!-- Header-->
+<header class="py-5" style="background-color: #0799b665;">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bold text-white mb-4">{{ 'HEADER_TITLE_CONTACT' | translate }}</h1>
+                    <p class="lead fw-bold fst-italic text-dark-50 mb-4">{{ 'HEADER_DESC_CONTACT' | translate }}</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-lg px-4 me-sm-3 text-white fw-bold" style="background-color: #114C5F;"
+                            href="#features">{{ 'HEADER_BUTTON_CONTACT' | translate }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5"
+                    src="../../../../assets/img-EduMind/Landing-page-EduMind/contact.svg" alt="..." /></div>
+        </div>
+    </div>
+</header>
+
+<!-- Page Content -->
+<div class="container position-relative z-index-20 py-7 mt-5 mb-5">
+    <!-- Contact Form-->
+    <div class="row gx-10 my-10 pt-5">
+        <div class="col-12 col-lg-8">
+            <p class="mb-3 small fw-bolder tracking-wider text-uppercase" style="color: #114C5F;">{{ 'CONTACT_TITLE_CONTACT' | translate }}</p>
+            <h2 class="display-5 fw-bold mb-6">{{ 'CONTACT_SUBTITLE_CONTACT' | translate }}</h2> 
+            <form>
+                <div class="row g-5">
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">{{ 'FORM_NAME_CONTACT' | translate }}</label>
+                        <input type="text" class="form-control" name="name" placeholder="{{ 'FORM_NAME_PLACEHOLDER_CONTACT' | translate }}">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">{{ 'FORM_EMAIL_CONTACT' | translate }}</label>
+                        <input type="email" class="form-control" name="email" placeholder="{{ 'FORM_EMAIL_PLACEHOLDER_CONTACT' | translate }}">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label class="form-label">{{ 'FORM_PHONE_CONTACT' | translate }}</label>
+                        <input type="text" class="form-control" name="telephone" placeholder="{{ 'FORM_PHONE_PLACEHOLDER_CONTACT' | translate }}">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">{{ 'FORM_MESSAGE_CONTACT' | translate }}</label>
+                        <textarea name="about" class="form-control" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="col-12 justify-content-end d-flex">
+                        <button class="btn text-white fs-bold" style="background-color: #114C5F;" type="submit">{{ 'FORM_SUBMIT_CONTACT' | translate }}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Contact Details-->
+        <div class="col-12 col-lg-4 mt-5 mt-lg-0">
+            <p class="mb-4 small fw-bolder tracking-wider text-uppercase" style="color: #114C5F;">{{ 'LOCATION_CONTACT' | translate }}</p>
+            <p>{{ 'ADDRESS_CONTACT' | translate }}</p>
+        </div>
+    </div>
+</div>
+
+
+
+<app-footer-edu-mind></app-footer-edu-mind>

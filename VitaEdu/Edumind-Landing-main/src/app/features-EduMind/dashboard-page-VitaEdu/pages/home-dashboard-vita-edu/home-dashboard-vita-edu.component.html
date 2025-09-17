@@ -1,0 +1,62 @@
+<div class="dashboard-container">
+  <app-side-menu-vita-edu></app-side-menu-vita-edu>
+  
+  <div class="main-content"><br><br><br>
+    
+
+    <div class="stats-grid">
+      <!-- Tarjetas de estadísticas -->
+      <div class="stat-card">
+        <div class="stat-icon">
+          <fa-icon [icon]="faUsers"></fa-icon>
+        </div>
+        <div class="stat-info">
+          <h3>Total Usuarios</h3>
+          <p>{{stats.totalUsers}}</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <fa-icon [icon]="faUserTie"></fa-icon>
+        </div>
+        <div class="stat-info">
+          <h3>Colaboradores</h3>
+          <p>{{stats.totalCollaborators}}</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <fa-icon [icon]="faClipboardCheck"></fa-icon>
+        </div>
+        <div class="stat-info">
+          <h3>Tests Realizados</h3>
+          <p>{{stats.totalTests}}</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <fa-icon [icon]="faChartLine"></fa-icon>
+        </div>
+        <div class="stat-info">
+          <h3>Tasa de Finalización</h3>
+          <p>{{stats.completionRate}}%</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="charts-container">
+      <div class="chart-card">
+        <h3>Usuarios por Mes</h3>
+        <canvas id="usersChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Tests Completados por Día</h3>
+        <canvas id="testsChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

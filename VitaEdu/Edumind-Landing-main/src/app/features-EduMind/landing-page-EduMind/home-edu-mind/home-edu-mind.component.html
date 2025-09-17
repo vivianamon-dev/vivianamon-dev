@@ -1,0 +1,282 @@
+<app-nav-bar-edu-mind></app-nav-bar-edu-mind>
+<app-social-medial-edu-mind></app-social-medial-edu-mind>
+<!-- Header-->
+<br><br>
+<header class="py-5 mb-5 z-index-1 w-100" style=" background: url('../../../../assets/img-EduMind/Landing-page-EduMind/banner4.svg'); background-size: cover;">
+    <div class="container-fluid px-5">
+        <div class="row gx-5 align-items-center justify-content-between" style="height: 100vh; margin-top: -50px;">
+            <!-- Contenido -->
+            <div class="col-lg-6 text-center text-lg-start">
+                <div class="my-5">
+                    <h3 class="text-white mt-5 animate__animated animate__slideInLeft" style="font-weight: 200; margin-bottom: -10px;">
+                        {{ 'SOON' | translate }}
+                    </h3>
+                    <h1 class="display-5 fw-bold text-white mb-4 animate__animated animate__slideInLeft" style="font-size: 80px;">
+                        EduMind
+                    </h1>
+                    <p class="lead fw-bold text-white text-justify mb-4 animate__animated animate__slideInLeft">
+                        "{{ 'DESCRIPTION' | translate }}"
+                    </p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start animate__animated animate__slideInLeft">
+                        <button type="button" 
+                                class="btn btn-lg px-4 me-sm-3 text-white fw-bold" 
+                                style="background-color: #0799b665;"
+                                (click)="scrollToFeatures($event)">
+                            {{ 'KNOW_MORE' | translate }}
+                        </button>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Features section-->
+<section class="py-5 mb-5" id="features" scrollReveal>
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="mb-5 text-center">
+                <h2 class="fw-bolder mb-0">{{ 'STRESS_IMPACT' | translate }}</h2> <!-- Traducción para "IMPACTO DEL ESTRÉS EN ESTUDIANTES" -->
+            </div>
+            <div class="col-lg-12">
+                <div class="row gx-5 row-cols-1 row-cols-md-2">
+                    <div class="col mb-5 h-100" scrollReveal>
+                        <div class="feature bg-gradient text-white rounded-3 mb-3 d-flex align-items-center justify-content-center border border-light p-1 mx-3"
+                             style="width: 50px; height: 50px; background-color: #0799b665;">
+                            <fa-icon [icon]="faBed" size="1x"></fa-icon>
+                        </div>
+                        <h2 class="h5">{{ 'SLEEP_IMPACT' | translate }}</h2> <!-- Traducción para "EL SUEÑO: LA PRIMERA VÍCTIMA DEL ESTRÉS ESTUDIANTIL." -->
+                        <p class="mb-0 text-justify">{{ 'SLEEP_TEXT' | translate }}</p> <!-- Traducción del texto correspondiente -->
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class="feature bg-gradient text-white rounded-3 mb-3 d-flex align-items-center justify-content-center border border-light p-1 mx-3"
+                             style="width: 50px; height: 50px; background-color: #0799b665;">
+                            <fa-icon [icon]="faGraduationCap" size="1x"></fa-icon>
+                        </div>
+                        <h2 class="h5">{{ 'ACADEMIC_PERFORMANCE' | translate }}</h2> <!-- Traducción para "RENDIMIENTO ESCOLAR: UNA LUCHA CONSTANTE." -->
+                        <p class="mb-0 text-justify">{{ 'ACADEMIC_TEXT' | translate }}</p> <!-- Traducción del texto correspondiente -->
+                    </div>
+                    <div class="col mb-5 mb-md-0 h-100">
+                        <div class="feature bg-gradient text-white rounded-3 mb-3 d-flex align-items-center justify-content-center border border-light p-1 mx-3"
+                             style="width: 50px; height: 50px; background-color: #0799b665;">
+                            <fa-icon [icon]="faHandHoldingHeart" size="1x"></fa-icon>
+                        </div>
+                        <h2 class="h5">{{ 'WELLNESS_IMPACT' | translate }}</h2> <!-- Traducción para "BIENESTAR: CÓMO AFECTA TU SALUD." -->
+                        <p class="mb-0 text-justify">{{ 'WELLNESS_TEXT' | translate }}</p> <!-- Traducción del texto correspondiente -->
+                    </div>
+                    <div class="col h-100">
+                        <div class="feature bg-gradient text-white rounded-3 mb-3 d-flex align-items-center justify-content-center border border-light p-1 mx-3"
+                             style="width: 50px; height: 50px; background-color: #0799b665;">
+                            <fa-icon [icon]="faUsers" size="1x"></fa-icon>
+                        </div>
+                        <h2 class="h5">{{ 'SOCIAL_RELATIONS' | translate }}</h2> <!-- Traducción para "SOCIABILIDAD: UNA RELACIÓN TORMENTOSA." -->
+                        <p class="mb-0 text-justify">{{ 'SOCIAL_TEXT' | translate }}</p> <!-- Traducción del texto correspondiente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="masthead  mb-5 w-55 h-100 z-index-1" tyle="height: 100vh;" scrollReveal>
+    <div class="container banner-3 px-5 z-index-1" style="background: url('../../../../assets/img-EduMind/Landing-page-EduMind/banner-5.svg'); background-size: cover; background-position: center; border-radius: 10px;">
+        <div class="row gx-5 align-items-center z-index-1">
+            <div class="col-lg-6">
+                <div class="mb-5 mb-lg-0 text-center text-lg-start z-index-1">
+                    <h3 class="text-white mt-5" style="font-weight: 200; margin-bottom: -50px;">{{ 'COMING_SOON' | translate }}</h3> <!-- Traducción de "MUY PRONTO" -->
+                    <h2 class="display-1 lh-1 mt-5 text-white" style="font-weight: 700;">{{ 'APP_NAME' | translate }}</h2> <!-- Traducción de "EduMind app" -->
+                    <p class="lead fw-normal mb-5 text-justify text-white fst-italic">{{ 'APP_DESCRIPTION' | translate }}</p> <!-- Traducción de "¡Descarga EduMind y toma el control de tu bienestar! Detecta, prevé y maneja tu estrés al instante." -->
+                    <div class="d-flex flex-column flex-lg-row align-items-center mb-5">
+                        <a class="playstore-button me-lg-3 mb-4 mb-lg-0" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon" viewBox="0 0 512 512">
+                            <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+                            </svg>
+                            <span class="texts">
+                            <span class="text-1">{{ 'BTN_GOOGLE' | translate }}</span>
+                            <span class="text-2">Google Play</span>
+                            </span>
+                        </a>
+                        <a href="#" class="playstore-button me-lg-3 mb-4 mb-lg-0">
+                            <span class="icon">
+                            <svg
+                                fill="currentcolor"
+                                viewBox="-52.01 0 560.035 560.035"
+                                xmlns="http://www.w3.org/2000/svg"
+                                stroke="#ffffff"
+                            >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                id="SVGRepo_tracerCarrier"[lang]=""
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                ></g>
+                                <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M380.844 297.529c.787 84.752 74.349 112.955 75.164 113.314-.622 1.988-11.754 40.191-38.756 79.652-23.343 34.117-47.568 68.107-85.731 68.811-37.499.691-49.557-22.236-92.429-22.236-42.859 0-56.256 21.533-91.753 22.928-36.837 1.395-64.889-36.891-88.424-70.883-48.093-69.53-84.846-196.475-35.496-282.165 24.516-42.554 68.328-69.501 115.882-70.192 36.173-.69 70.315 24.336 92.429 24.336 22.1 0 63.59-30.096 107.208-25.676 18.26.76 69.517 7.376 102.429 55.552-2.652 1.644-61.159 35.704-60.523 106.559M310.369 89.418C329.926 65.745 343.089 32.79 339.498 0 311.308 1.133 277.22 18.785 257 42.445c-18.121 20.952-33.991 54.487-29.709 86.628 31.421 2.431 63.52-15.967 83.078-39.655"
+                                ></path>
+                                </g>
+                            </svg>
+                            </span>
+                            <span class="texts">
+                            <span class="text-1">{{ 'BTN_STORE' | translate }}</span>
+                            <span class="text-2">App store</span>
+                            </span>
+                        </a>
+  
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About section one-->
+<section class="py-5" id="scroll-target" scrollReveal>
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid rounded mb-5 mb-lg-0" src="../../../../assets/img-EduMind/Landing-page-EduMind/tabla.svg" alt="..." />
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bolder">{{ 'CONTINUOUS_ANALYSIS' | translate }}</h2> <!-- Traducción de "ANÁLISIS CONTINUO PARA TU TRANQUILIDAD" -->
+                <p class="lead fw-normal text-muted mb-0">{{ 'ANALYSIS_DESCRIPTION' | translate }}</p> <!-- Traducción de "EduMind genera reportes..." -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Preview section-->
+<section class="py-5 z-index-1" scrollReveal>
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder">{{ 'THREE_REASONS' | translate }}</h2> <!-- Traducción de "TRES RAZONES PARA USAR EDUCA TU MENTE" -->
+                    <p class="lead fw-normal text-muted mb-5">{{ 'REASONS_DESCRIPTION' | translate }}</p> <!-- Traducción de "Descubre los beneficios..." -->
+                </div>
+            </div>
+        </div>
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5" scrollReveal>
+                <div class="h-100 shadow border-0">
+                    <img class="card-img-top" src="../../../../assets/img-EduMind/Landing-page-EduMind/moritoreo.svg" alt="..." />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{ 'BENEFITS' | translate }}</div>
+                        <h5 class="card-title mb-3">{{ 'CONTINUOUS_MONITORING' | translate }}</h5>
+                        <p class="card-text mb-0">{{ 'MONITORING_DESCRIPTION' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5" scrollReveal>
+                <div class="h-100 shadow border-0">
+                    <img class="card-img-top" src="../../../../assets/img-EduMind/Landing-page-EduMind/noti.jpg" alt="..." />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{ 'BENEFITS' | translate }}</div>
+                        <h5 class="card-title mb-3">{{ 'CUSTOM_ALERTS' | translate }}</h5>
+                        <p class="card-text mb-0">{{ 'ALERTS_DESCRIPTION' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5 z-index-0" scrollReveal>
+                <div class="h-100 shadow border-0">
+                    <img class="card-img-top" src="../../../../assets/img-EduMind/Landing-page-EduMind/salud.svg" alt="..." />
+                    <div class="card-body p-4">
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">{{ 'BENEFITS' | translate }}</div>
+                        <h5 class="card-title mb-3">{{ 'IMPROVE_LIFE_QUALITY' | translate }}</h5>
+                        <p class="card-text mb-0">{{ 'LIFE_QUALITY_DESCRIPTION' | translate }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About section two-->
+<section class="py-5 ml-5" scrollReveal>
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-first order-lg-last">
+                <img class="img-fluid rounded mb-5 mb-lg-0" src="../../../../assets/img-EduMind/Landing-page-EduMind/test-img.svg" alt="..." />
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bolder">{{ 'DISCOVER_FACTORS' | translate }}</h2> <!-- Traducción de "Descubre los Factores Clave..." -->
+                <p class="lead fw-normal text-muted mb-0">{{ 'TEST_DESCRIPTION' | translate }}</p> <!-- Traducción de "Al completar el test..." -->
+                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start mt-3">
+                    <a class="btn btn-lg px-4 me-sm-3 text-white fw-bold" style="background-color: #0799b665;" href="#features">{{ 'LEARN_MORE' | translate }}</a> <!-- Traducción de "Saber Más" -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team members section-->
+<!-- <section class="py-5 bg-light">
+    <div class="container px-5 my-5">
+        <div class="text-center">
+            <h2 class="fw-bolder">Our team</h2>
+            <p class="lead fw-normal text-muted mb-5">Dedicated to quality and your success</p>
+        </div>
+        <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5 mb-5 mb-xl-0">
+                <div class="text-center">
+                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d"
+                        alt="..." />
+                    <h5 class="fw-bolder">Ibbie Eckart</h5>
+                    <div class="fst-italic text-muted">Founder &amp; CEO</div>
+                </div>
+            </div>
+            <div class="col mb-5 mb-5 mb-xl-0">
+                <div class="text-center">
+                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d"
+                        alt="..." />
+                    <h5 class="fw-bolder">Arden Vasek</h5>
+                    <div class="fst-italic text-muted">CFO</div>
+                </div>
+            </div>
+            <div class="col mb-5 mb-5 mb-sm-0">
+                <div class="text-center">
+                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d"
+                        alt="..." />
+                    <h5 class="fw-bolder">Toribio Nerthus</h5>
+                    <div class="fst-italic text-muted">Operations Manager</div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="text-center">
+                    <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d"
+                        alt="..." />
+                    <h5 class="fw-bolder">Malvina Cilla</h5>
+                    <div class="fst-italic text-muted">CTO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- Page Content-->
+<!-- <section class="py-5">
+    <div class="container px-5">
+        <h1 class="fw-bolder fs-5 mb-4">Company Blog</h1>
+        <div class="card border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-0">
+                <div class="row gx-0">
+                    <div class="col-lg-6 col-xl-5 py-lg-5">
+                        <div class="p-4 p-md-5">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                            <div class="h2 fw-bolder">Article heading goes here</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique delectus ab doloremque, qui doloribus ea officiis...</p>
+                            <a class="stretched-link text-decoration-none" href="#!">
+                                Read more
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7"><div class="bg-featured-blog" style="background-image: url('https://dummyimage.com/700x350/343a40/6c757d')"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<app-footer-edu-mind></app-footer-edu-mind>

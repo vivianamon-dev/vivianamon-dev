@@ -1,0 +1,247 @@
+<!-- Add this navbar at the top of the file -->
+<nav class="editor-navbar">
+  <div class="nav-left">
+    <button class="nav-btn" (click)="returnToDashboard()">
+      <fa-icon [icon]="faArrowLeft"></fa-icon>
+      Regresar
+    </button>
+    <h2 class="nav-title">Editor de Test</h2>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn save-btn" (click)="saveTest()">
+      <fa-icon [icon]="faSave"></fa-icon>
+      Guardar
+    </button>
+  </div>
+</nav>
+
+<!-- Existing editor container -->
+<div class="editor-container">
+  <!-- Sidebar Editor -->
+  <div class="editor-sidebar">
+    <div class="editor-header">
+      <h3>Editor de Test</h3>
+    </div>
+
+    <!-- Tools Panel -->
+    <div class="tools-panel">
+      <button (click)="addQuestion('title')" class="tool-btn">
+        <fa-icon [icon]="faHeading"></fa-icon>
+        <span>Título</span>
+      </button>
+      <button (click)="addQuestion('subtitle')" class="tool-btn">
+        <fa-icon [icon]="faFont"></fa-icon>
+        <span>Subtítulo</span>
+      </button>
+      <button (click)="addQuestion('paragraph')" class="tool-btn">
+        <fa-icon [icon]="faParagraph"></fa-icon>
+        <span>Párrafo</span>
+      </button>
+      <button (click)="addQuestion('multiple')" class="tool-btn">
+        <fa-icon [icon]="faListUl"></fa-icon>
+        <span>Opción Múltiple</span>
+      </button>
+      <button (click)="addQuestion('open')" class="tool-btn">
+        <fa-icon [icon]="faAlignLeft"></fa-icon>
+        <span>Pregunta Abierta</span>
+      </button>
+    </div>
+
+    <!-- Question List -->
+    <div class="questions-list">
+      <!-- In the question list, add points display -->
+      <!-- In the question list -->
+      <div *ngFor="let question of testQuestions" 
+           class="question-item"
+           [class.active]="currentEditingQuestion?.id === question.id">
+        <fa-icon [icon]="faGripVertical" class="drag-handle"></fa-icon>
+        <span class="question-type">{{question.type}}</span>
+        <span class="question-points" *ngIf="question.type === 'multiple' || question.type === 'open'">
+          Valor: {{question.points}} pts
+        </span>
+        <div class="question-actions">
+          <button (click)="editQuestion(question)">
+            <fa-icon [icon]="faEdit"></fa-icon>
+          </button>
+          <button (click)="deleteQuestion(question.id)">
+            <fa-icon [icon]="faTrash"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Preview Panel -->
+  <div class="preview-panel">
+    <div class="preview-content">
+      <div *ngFor="let question of testQuestions" class="question-preview">
+        <!-- Title -->
+        <h1 *ngIf="question.type === 'title'" 
+            class="title-preview"
+            [ngStyle]="question.styles">
+          {{question.content || 'Título del Test'}}
+        </h1>
+
+        <!-- Subtitle -->
+        <h2 *ngIf="question.type === 'subtitle'" 
+            class="subtitle-preview"
+            [ngStyle]="question.styles">
+          {{question.content || 'Subtítulo'}}
+        </h2>
+
+        <!-- Paragraph -->
+        <p *ngIf="question.type === 'paragraph'" 
+           class="paragraph-preview"
+           [ngStyle]="question.styles">
+          {{question.content || 'Texto del párrafo'}}
+        </p>
+
+        <!-- Multiple Choice Question -->
+        <div *ngIf="question.type === 'multiple'" 
+             class="multiple-choice-preview"
+             [ngStyle]="question.styles">
+          <p class="question-text">{{question.content || 'Pregunta de opción múltiple'}}</p>
+          <div class="options-list">
+            <div *ngFor="let option of question.options ?? []; let i = index" class="option-item">
+              <input type="radio" [name]="'question' + question.id" disabled>
+              <span>{{option || 'Opción'}} ({{question.optionPoints?.[i] || 0}} pts)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Open Question -->
+        <div *ngIf="question.type === 'open'" 
+             class="open-question-preview"
+             [ngStyle]="question.styles">
+          <p class="question-text">{{question.content || 'Pregunta abierta'}}</p>
+          <div class="answer-area"></div>
+          <span class="points" *ngIf="question.points">Puntos: {{question.points}}</span>
+        </div>
+      </div>
+
+      <!-- Editor Panel - Move outside the question loop -->
+      <div *ngIf="currentEditingQuestion" class="editor-panel">
+        <div class="editor-form">
+          <input type="text" 
+                 [ngModel]="currentEditingQuestion?.content" 
+                 (ngModelChange)="updateContent(currentEditingQuestion, $event)"
+                 placeholder="Escribe tu pregunta aquí">
+          
+          <!-- Style Options -->
+          <div class="style-options">
+            <!-- Color Picker -->
+            <div class="style-group" (mouseleave)="colorPicker.hidden = true">
+              <button class="style-toggle" (click)="toggleDropdown(colorPicker)">
+                <fa-icon [icon]="faPalette"></fa-icon>
+                Color de texto
+              </button>
+              <div #colorPicker class="style-dropdown" hidden>
+                <input type="color" 
+                       [ngModel]="currentEditingQuestion?.styles?.color"
+                       (ngModelChange)="updateStyle(currentEditingQuestion, 'color', $event)"
+                       placeholder="#000000">
+              </div>
+            </div>
+
+            <!-- Font Family -->
+            <div class="style-group" (mouseleave)="fontFamilyDropdown.hidden = true">
+              <button class="style-toggle" (click)="toggleDropdown(fontFamilyDropdown)">
+                <fa-icon [icon]="faFont"></fa-icon>
+                Tipo de letra
+              </button>
+              <div #fontFamilyDropdown class="style-dropdown" hidden>
+                <select [ngModel]="currentEditingQuestion?.styles?.fontFamily"
+                        (ngModelChange)="updateStyle(currentEditingQuestion, 'fontFamily', $event)">
+                  <option *ngFor="let font of fontFamilies" [value]="font">{{font}}</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Text Position -->
+            <div class="style-group" (mouseleave)="positionDropdown.hidden = true">
+              <button class="style-toggle" (click)="toggleDropdown(positionDropdown)">
+                <fa-icon [icon]="faAlignLeft"></fa-icon>
+                Posición
+              </button>
+              <div #positionDropdown class="style-dropdown" hidden>
+                <div class="position-buttons">
+                  <button (click)="updateStyle(currentEditingQuestion, 'textAlign', 'left')">
+                    <fa-icon [icon]="faAlignLeft"></fa-icon>
+                  </button>
+                  <button (click)="updateStyle(currentEditingQuestion, 'textAlign', 'center')">
+                    <fa-icon [icon]="faAlignCenter"></fa-icon>
+                  </button>
+                  <button (click)="updateStyle(currentEditingQuestion, 'textAlign', 'right')">
+                    <fa-icon [icon]="faAlignRight"></fa-icon>
+                  </button>
+                  <button (click)="updateStyle(currentEditingQuestion, 'textAlign', 'justify')">
+                    <fa-icon [icon]="faAlignJustify"></fa-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Other style groups remain the same but add mouseleave -->
+            <div class="style-group" (mouseleave)="fontSizeDropdown.hidden = true">
+              <button class="style-toggle" (click)="fontSizeDropdown.hidden = !fontSizeDropdown.hidden">
+                <fa-icon [icon]="faTextHeight"></fa-icon>
+                Tamaño de letra
+              </button>
+              <div #fontSizeDropdown class="style-dropdown" hidden>
+                <select [ngModel]="currentEditingQuestion?.styles?.fontSize"
+                        (ngModelChange)="updateStyle(currentEditingQuestion, 'fontSize', $event)">
+                  <option *ngFor="let size of fontSizes" [value]="size">{{size}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="style-group" (mouseleave)="fontWeightDropdown.hidden = true">
+              <button class="style-toggle" (click)="fontWeightDropdown.hidden = !fontWeightDropdown.hidden">
+                <fa-icon [icon]="faBold"></fa-icon>
+                Grosor de letra
+              </button>
+              <div #fontWeightDropdown class="style-dropdown" hidden>
+                <select [ngModel]="currentEditingQuestion?.styles?.fontWeight"
+                        (ngModelChange)="updateStyle(currentEditingQuestion, 'fontWeight', $event)">
+                  <option *ngFor="let weight of fontWeights" [value]="weight">{{weight}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question Type Specific Editors -->
+          <div *ngIf="currentEditingQuestion?.type === 'multiple'" class="options-editor">
+            <div *ngFor="let option of currentEditingQuestion?.options ?? []; let i = index" class="option-input">
+              <input type="text" 
+                     [ngModel]="currentEditingQuestion?.options?.[i]" 
+                     (ngModelChange)="updateOption(currentEditingQuestion, i, $event)"
+                     placeholder="Opción">
+              <input type="number" 
+                     [ngModel]="currentEditingQuestion?.optionPoints?.[i]"
+                     (ngModelChange)="updateOptionPoints(currentEditingQuestion, i, $event)"
+                     class="option-points-input" 
+                     min="0" 
+                     placeholder="Puntos">
+              <button (click)="deleteOption(currentEditingQuestion, i)">
+                <fa-icon [icon]="faTrash"></fa-icon>
+              </button>
+            </div>
+            <button (click)="addOption(currentEditingQuestion)" class="add-option-btn">
+              <fa-icon [icon]="faPlus"></fa-icon> Agregar Opción
+            </button>
+          </div>
+
+          <!-- Points input for open questions -->
+          <div *ngIf="currentEditingQuestion?.type === 'open'" class="points-editor">
+            <label>Valor de la pregunta:</label>
+            <input type="number" 
+                   [ngModel]="currentEditingQuestion?.points"
+                   (ngModelChange)="updatePoints(currentEditingQuestion, $event)"
+                   min="0"
+                   class="points-input">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

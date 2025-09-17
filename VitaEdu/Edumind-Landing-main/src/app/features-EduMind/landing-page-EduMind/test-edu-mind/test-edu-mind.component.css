@@ -1,0 +1,151 @@
+/*** Service ***/
+.service-item {
+  position: relative;
+  padding: 45px 30px;
+  background: #0799b665;
+  transition: .5s;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover {
+  background: white;
+  transform: translateY(-5px);
+}
+
+.h1-test{
+  font-weight: 900;
+}
+.p-test{
+  font-weight: 500;
+}
+.btn-test{
+  font-weight: 900;
+}
+.service-item .service-icon {
+  margin: 0 auto 20px auto;
+  width: 90px;
+  height: 90px;
+  color: white;
+  background: gray;
+  transition: .5s;
+}
+
+.service-item h5{
+  transition: .5s;
+  font-weight: 900;
+}
+.service-item p {
+  transition: .5s;
+  font-weight: 500;
+}
+
+.service-item:hover h5,
+.service-item:hover p {
+  color: #000000;
+}
+
+.service-item a.btn {
+  position: relative;
+  display: flex;
+  color: white;
+  font-weight: 900;
+  transition: .5s;
+  z-index: 1;
+}
+
+.service-item:hover a.btn {
+  color: white;
+}
+
+.service-item a.btn::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 35px;
+  top: 0;
+  left: 0;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0);
+  transition: .5s;
+  z-index: -1;
+}
+
+.service-item:hover a.btn::before {
+  width: 100%;
+  background: #114c5f;
+}
+
+
+/*** Feature ***/
+.feature {
+  background: url(../../../../assets/img-EduMind/Landing-page-EduMind/bg-hero.png) center center no-repeat;
+  background-size: cover;
+}
+
+
+/*** Newsletter ***/
+.newsletter {
+  background: url(../../../../assets/img-EduMind/Landing-page-EduMind/bg-hero.png) center center no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 992px) {
+  .newsletter .container {
+      max-width: 100% !important;
+  }
+
+  .newsletter .newsletter-text  {
+      padding-right: calc(((100% - 960px) / 2) + .75rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .newsletter .newsletter-text  {
+      padding-right: calc(((100% - 1140px) / 2) + .75rem);
+  }
+}
+
+@media (min-width: 1400px) {
+  .newsletter .newsletter-text  {
+      padding-right: calc(((100% - 1320px) / 2) + .75rem);
+  }
+}
+
+/*** FAQs ***/
+.accordion .accordion-item {
+  border: none;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion .accordion-button {
+  background: white;
+  border-radius: 15px;
+}
+
+.accordion .accordion-button:not(.collapsed) {
+  color: #FFFFFF;
+  background: #114c5f;
+  box-shadow: none;
+}
+
+.accordion .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion .accordion-body {
+  padding: 15px 0 0 0;
+}
+
+.accordion-item:hover {
+  transform: translateX(5px);
+}
+
+/* Ajustes para las animaciones de scroll */
+[scrollReveal] {
+  visibility: hidden;
+}
+
+[scrollReveal].reveal {
+  visibility: visible;
+}

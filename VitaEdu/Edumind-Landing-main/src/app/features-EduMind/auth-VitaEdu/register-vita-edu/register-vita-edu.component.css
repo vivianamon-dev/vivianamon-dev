@@ -1,0 +1,99 @@
+/* Estilo personalizado para el botón de cerrar */
+.modal-header-1 .btn-close {
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -15px;
+    margin-right: -15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para pantallas grandes (>= 992px) */
+@media (min-width: 992px) {
+    .modal-header-1 .btn-close {
+        margin-right: -115%; 
+        margin-top: -40px;
+    }
+}
+
+/* Ajuste para pantallas pequeñas (<= 991px) */
+@media (max-width: 991px) {
+    .modal-header-1 .btn-close {
+        margin-right: -60px; 
+        margin-top: -40px;
+    }
+}
+
+/* Efecto hover para el botón de cerrar */
+.modal-header-1 .btn-close:hover {
+    background-color: #ffffff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Fondo para el banner */
+.banner-register {
+    background-color: #b7e1ea;
+}
+
+/* Asegurando que el modal tenga bordes redondeados */
+.modal-dialog,
+.modal-content {
+    border-radius: 70px !important;
+}
+
+h5 {
+    margin-top: 30px;   /* Ajustado para dar espacio a los campos adicionales */
+    font-size: 40px;
+    font-family: Nunito, sans-serif;
+    font-weight: 900;
+    color: #000;
+}
+
+.contenido-register {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px; /* Añadido para dar más espacio al contenido */
+}
+
+.cont-text {
+    font-size: 17px;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+
+.btn-register {
+    background-color: #006b7e;
+    color: #fff;
+    font-size: 17px;
+    font-family: Nunito, sans-serif;
+    font-weight: 900;
+}
+
+.btn-register:hover {
+    background-color: #b7e1ea;
+    color: #000000;
+}
+
+/* Ajustes adicionales para el formulario de registro */
+.mb-3 {
+    margin-bottom: 1.2rem !important; /* Espaciado entre campos */
+}
+
+/* Ajuste para el contenedor del formulario */
+.modal-body {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+/* Estilo para los inputs */
+.form-control {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+}
+
+/* Estilo para las etiquetas */
+.form-label {
+    margin-bottom: 0.4rem;
+}

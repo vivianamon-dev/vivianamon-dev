@@ -1,0 +1,39 @@
+[scrollReveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease-out;
+  visibility: hidden;
+}
+
+[scrollReveal].reveal {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Efectos diferentes para cada sección */
+section[scrollReveal]:nth-child(even) {
+  transform: translateX(-50px);
+}
+
+section[scrollReveal]:nth-child(odd) {
+  transform: translateX(50px);
+}
+
+section[scrollReveal].reveal {
+  transform: translateX(0);
+}
+
+/* Retrasos personalizados para los miembros del equipo */
+.team-member[scrollReveal] {
+  transition-delay: calc(var(--index, 0) * 0.1s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [scrollReveal] {
+    transition: none;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+}

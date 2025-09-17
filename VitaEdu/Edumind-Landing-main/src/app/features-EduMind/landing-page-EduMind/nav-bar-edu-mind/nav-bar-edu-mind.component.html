@@ -1,0 +1,69 @@
+<!--Navbar usando boostrap v.5.3.3-->
+<nav class="navbar bg-body-tertiary  navbar-expand-lg  bg-dark fixed-top ">
+    <div class="container-fluid  mx-5">
+    <a class="navbar-brand fs-5 text-black badge text-uppercase " href="/landing-page-EduMind/Home-VitaEdu">VitaEdu</a>
+    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="sidebar offcanvas offcanvas-start " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header text-white border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column p-4 flex-lg-row p-lg-0">
+        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+          <li class="nav-item button1">
+            <a class="nav-link active text-black fs-6" aria-current="page" href="/landing/Home-VitaEdu">{{ 'HOME' | translate }}</a>
+          </li>
+          <li class="nav-item mx-1 button1">
+            <a class="nav-link text-black fs-6" href="/landing/Test-VitaEdu">{{ 'TEST' | translate }}</a>
+          </li>
+          <li class="nav-item dropdown mx-1 button1">
+            <a class="nav-link dropdown-toggle text-black fs-6" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ 'DOCS' | translate }}
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item"  target="_blank" href="/landing/Docs-VitaEdu">{{ 'Introduction' | translate }}</a></li>
+              <li><a class="dropdown-item" target="_blank" href="#">{{ 'Software Architecture' | translate }}</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" target="_blank" href="#">{{ 'Wireframes' | translate }}</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-1 button1">
+            <a class="nav-link text-black fs-6" href="/landing/Teem-VitaEdu">{{ 'TEAM' | translate }}</a>
+          </li>
+          <li class="nav-item mx-1 button1">
+            <a class="nav-link text-black fs-6" href="#">{{ 'PARTNERS' | translate }}</a>
+          </li>
+          <li class="nav-item mx-1 button1">
+            <a class="nav-link text-black fs-6" href="/landing/Contact-VitaEdu">{{ 'CONTACT' | translate }}</a>
+          </li>
+          <!-- Dropdown de idiomas dentro del menú de navegación -->
+          <li class="nav-item dropdown mx-1 button1">
+            <a class="nav-link dropdown-toggle text-black fs-6" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="flag-united-kingdom flag"></i> {{ 'LANGUAGE' | translate }}
+            </a>
+            <ul class="dropdown-menu ">
+              <li><a class="dropdown-item"  (click)="translateText('en')"><i class="flag-united-kingdom flag"></i>English</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" (click)="translateText('es')"><i class="flag-spain flag"></i>Español</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class=" d-flex flex-column justify-content-center align-items-center gap-3 flex-lg-row">
+          <button class="Btn" (click)="abrirModal()">
+            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+            <div class="text">{{ 'BTN-LOGIN-NAV' | translate }}</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Incluir ambos componentes de modal -->
+<app-login-vita-edu></app-login-vita-edu>
+<app-register-vita-edu></app-register-vita-edu>
+
+
+

@@ -1,0 +1,115 @@
+*{
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+.playstore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 0.625rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  outline: 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.playstore-button:hover {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.texts {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.text-1 {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-2 {
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  header {
+      background: url('../../../../assets/img-EduMind/Landing-page-EduMind/fondo.svg') !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  .banner-3 {
+    background: url('../../../../assets/img-EduMind/Landing-page-EduMind/fondo-2.svg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70%;
+  }
+}
+
+[scrollReveal] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+[scrollReveal].reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efectos diferentes para cada sección */
+section[scrollReveal]:nth-child(even) {
+  transform: translateX(-50px);
+}
+
+section[scrollReveal]:nth-child(odd) {
+  transform: translateX(50px);
+}
+
+section[scrollReveal].reveal {
+  transform: translateX(0);
+}
+
+/* Retrasos personalizados */
+section[scrollReveal]:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+section[scrollReveal]:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+section[scrollReveal]:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+section[scrollReveal]:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+/* Asegurarse que las animaciones solo ocurran cuando el usuario no prefiere movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  [scrollReveal] {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}

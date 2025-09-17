@@ -1,0 +1,265 @@
+/* Contenedor principal */
+.sidebar-navbar-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #b7e1ea;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 70px; /* Solo íconos */
+}
+
+.logo-container {
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.logo {
+  width: 120px;
+  transition: width 0.3s;
+}
+
+.hamburger-icon {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Nav Menu */
+.nav-menu {
+  margin-top: 2rem;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  cursor: pointer;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link fa-icon {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Logout Button */
+.logout-container {
+  margin-top: auto;
+  padding: 1rem;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: transparent;
+  border: 1px solid rgba(61, 57, 57, 0.2);
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn fa-icon {
+  margin-right: 10px;
+}
+
+.logout-icon {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Navbar Styles */
+.top-navbar {
+  height: 64px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.top-navbar.expanded {
+  left: 250px;
+}
+
+.sidebar.collapsed ~ .top-navbar {
+  left: 70px;
+}
+
+/* Perfil de usuario */
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  width: 200px;
+  margin-top: 5px;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item fa-icon {
+  margin-right: 10px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-icon {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+
+  .top-navbar {
+    left: 0;
+    width: 100%;
+  }
+
+  .user-name {
+    display: none;
+  }
+}
+
+.user-profile img {
+  width: 40px; /* Set the width for the avatar */
+  height: 40px; /* Set the height for the avatar */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Add these new styles */
+.submenu {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.submenu li {
+  margin-left: 25px;  /* Add indent for child items */
+  position: relative;
+}
+
+.submenu li::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  width: 10px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.submenu .nav-link {
+  padding: 0.6rem 1rem;
+  font-size: 0.9em;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.submenu.expanded .nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.submenu-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-link {
+  cursor: pointer;
+}

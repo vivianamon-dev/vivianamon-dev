@@ -1,0 +1,84 @@
+<div class="sidebar-navbar-container">
+  <!-- Sidebar y Navbar Combinados -->
+  <div class="sidebar" [class.collapsed]="!isSidebarOpen">
+    <!-- Logo y Botón de toggle -->
+    <div class="logo-container" (click)="toggleSidebar()">
+      <fa-icon *ngIf="!isSidebarOpen" [icon]="faBars" class="hamburger-icon"></fa-icon>
+      <img *ngIf="isSidebarOpen" src="assets/img-EduMind/logos/logo-login.svg" alt="Logo" class="logo">
+    </div>
+    
+    <!-- Menu de Navegación -->
+    <!-- Replace the existing nav-menu section with this -->
+    <nav class="nav-menu">
+      <ul>
+        <li *ngFor="let item of menuItems">
+          <!-- If item has children (submenu) -->
+          <div *ngIf="item.children" class="nav-link" (click)="toggleSubmenu(item.id)">
+            <fa-icon [icon]="item.icon"></fa-icon>
+            <span *ngIf="isSidebarOpen">{{ item.label }}</span>
+            <fa-icon 
+              *ngIf="isSidebarOpen" 
+              [icon]="submenuStates[item.id] ? faAngleUp : faAngleDown" 
+              class="submenu-icon"
+              [class.rotated]="submenuStates[item.id]">
+            </fa-icon>
+          </div>
+          <ul 
+            *ngIf="item.children" 
+            class="submenu"
+            [class.expanded]="submenuStates[item.id]"
+            [style.display]="submenuStates[item.id] ? 'block' : 'none'">
+            <li *ngFor="let child of item.children" [routerLink]="child.route" routerLinkActive="active">
+              <a class="nav-link">
+                <fa-icon [icon]="child.icon"></fa-icon>
+                <span>{{ child.label }}</span>
+              </a>
+            </li>
+          </ul>
+          
+          <!-- If item doesn't have children -->
+          <a *ngIf="!item.children" class="nav-link" [routerLink]="item.route" routerLinkActive="active">
+            <fa-icon [icon]="item.icon"></fa-icon>
+            <span *ngIf="isSidebarOpen">{{ item.label }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Cerrar sesión -->
+    <div class="logout-container">
+      <button class="logout-btn" *ngIf="isSidebarOpen" (click)="logout()">
+        <fa-icon [icon]="faSignOut"></fa-icon>
+        <span>Cerrar Sesión</span>
+      </button>
+      <fa-icon *ngIf="!isSidebarOpen" [icon]="faSignOut" class="logout-icon" (click)="logout()"></fa-icon>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="top-navbar" [class.expanded]="isSidebarOpen">
+    <!-- Perfil de Usuario -->
+    <div class="user-profile">
+      <div class="user-info" (click)="toggleDropdown()">
+        <span class="user-name"><img src="{{ userAvatar }}" alt=""></span>
+        <span class="user-name">{{ userName }}</span>
+        <fa-icon [icon]="faChevronDown" class="dropdown-icon" [class.rotate]="isDropdownOpen"></fa-icon>
+      </div>
+      <div class="dropdown-menu" [class.show]="isDropdownOpen">
+        <a class="dropdown-item">
+          <fa-icon [icon]="faUser"></fa-icon>
+          <span>Mi Perfil</span>
+        </a>
+        <a class="dropdown-item">
+          <fa-icon [icon]="faCog"></fa-icon>
+          <span>Configuración</span>
+        </a>
+        <div class="divider"></div>
+        <a class="dropdown-item" (click)="logout()">
+          <fa-icon [icon]="faSignOut"></fa-icon>
+          <span>Cerrar Sesión</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>

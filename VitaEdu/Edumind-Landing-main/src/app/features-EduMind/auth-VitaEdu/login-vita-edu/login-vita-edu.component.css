@@ -1,0 +1,74 @@
+/* Estilo personalizado para el botón de cerrar */
+.modal-header-1 .btn-close {
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -15px;
+    margin-right: -15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para pantallas grandes (>= 992px) */
+@media (min-width: 992px) {
+    .modal-header-1 .btn-close {
+        margin-right: -115%; 
+        margin-top: -60px;    /* Ajuste para mantener el botón visible */
+    }
+}
+
+/* Ajuste para pantallas pequeñas (<= 991px) */
+@media (max-width: 991px) {
+    .modal-header-1 .btn-close {
+        margin-right: -60px; 
+        margin-top: -60px;    /* Ajuste para mantener el botón visible */
+    }
+}
+
+/* Efecto hover para el botón de cerrar */
+.modal-header-1 .btn-close:hover {
+    background-color: #ffffff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Fondo rojo para el banner */
+.banner-login {
+    background-color: #b7e1ea;
+}
+
+/* Asegurando que el modal tenga bordes redondeados */
+.modal-dialog,
+.modal-content {
+    border-radius: 70px !important;  /* Asegura bordes redondeados */
+}
+
+h5{
+    margin-top: 50px;   
+    font-size: 40px;
+    font-family: Nunito, sans-serif;
+    font-weight: 900;
+    color: #000;
+}
+.contenido-login{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.cont-text{
+    font-size: 17px;
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+.btn-login{
+    background-color: #006b7e;
+    color: #fff;
+    font-size: 17px;
+    font-family: Nunito, sans-serif;
+    font-weight: 900;
+}
+.btn-login:hover{
+    background-color: #b7e1ea;
+    color: #000000;
+}
+
+

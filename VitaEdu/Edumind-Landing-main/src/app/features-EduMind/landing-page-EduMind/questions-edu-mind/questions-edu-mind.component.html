@@ -1,0 +1,101 @@
+<app-nav-bar-edu-mind></app-nav-bar-edu-mind>
+
+<section class="custom-section">
+    <div class="row justify-content-center preguntas">
+      <div class="col-12 col-md-8" *ngIf="showQuestions">
+        <div class="bg-white rounded-3 shadow-lg p-4 xd">
+          <!-- Título y descripción del test -->
+          <h2 class="text-center mb-4 test-title">Evaluación de Nivel de Estrés</h2>
+          <p class="text-center mb-4">
+            Completa este test para obtener información detallada sobre tus resultados. Para llenar el test, simplemente
+            selecciona las respuestas correctas y elige una opción para avanzar a la siguiente pregunta.
+          </p>
+          
+          <!-- Barra de progreso -->
+          <div class="steps-container">
+            <div class="progress-text">
+              {{ progressBarWidth | number: '1.0-0' }}%
+            </div>
+            <div class="steps">
+              <div *ngFor="let step of steps; let i = index"
+                   class="step"
+                   [class.selected]="i === currentQuestionIndex"
+                   [class.completed]="i < currentQuestionIndex"
+                   (click)="onStepClick(i)">
+              </div>
+            </div>
+          </div>
+  
+          <!-- Botón para iniciar el test -->
+          <div *ngIf="!testStarted">
+            <div class="text-center mb-4">
+              <button type="button" class="btn btn-1" (click)="startTest()">Iniciar Test</button>
+            </div>
+          </div>
+  
+          <!-- Formulario de preguntas -->
+          <div *ngIf="testStarted && currentQuestionIndex < questions.length" class="fadeInQuestion">
+            <h3>{{ questions[currentQuestionIndex].question }}</h3>
+            <div class="row">
+              <!-- Botones de respuesta -->
+              <div class="col-12 col-md-6">
+                <div *ngFor="let option of questions[currentQuestionIndex].options.slice(0, 2); let i = index" class="text-center">
+                  <button class="btn btn-primary mb-3" 
+                          (click)="onOptionChange($event, option)" 
+                          [ngClass]="{'btn-hover': currentQuestionIndex === i}">
+                    {{ option }}
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div *ngFor="let option of questions[currentQuestionIndex].options.slice(2, 4); let i = index" class="text-center">
+                  <button class="btn btn-primary mb-3" 
+                          (click)="onOptionChange($event, option)" 
+                          [ngClass]="{'btn-hover': currentQuestionIndex === i}">
+                    {{ option }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Mensaje de finalización del test -->
+          <div *ngIf="currentQuestionIndex >= questions.length">
+            <h3 class="text-center">¡Test completado!</h3>
+            <p class="text-center">Gracias por completar el test.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Sección de resultados (inicialmente oculta) -->
+    <!-- In your results section -->
+    <div *ngIf="showResults" class="resultados">
+      <div class="col-12 col-md-12 mx-auto bg-white rounded-3 shadow-lg p-4 ms-md-4 mt-4 mt-md-0">
+        <h2 class="text-center mb-4">Resultados de la Evaluación de Estrés</h2>
+        <div class="result-content">
+          <h3 class="text-center mb-3">{{ stressLevel }}</h3>
+          <p class="text-center mb-4">Puntuación total: {{ totalScore }} puntos</p>
+          <div class="message-box p-4 rounded">
+            <p class="mb-0">{{ stressMessage }}</p>
+          </div>
+        </div>
+        <div class="text-center mt-4 d-flex justify-content-center gap-3">
+          <button type="button" class="btn btn-primary" (click)="resetTest()">
+            <i class="fas fa-redo-alt me-2"></i>Reiniciar Test
+          </button>
+          <button type="button" class="btn btn-primary" (click)="finishTest()">
+            <i class="fas fa-check me-2"></i>Finalizar Test
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
+  
+  
+  
+
+<app-footer-edu-mind></app-footer-edu-mind>
